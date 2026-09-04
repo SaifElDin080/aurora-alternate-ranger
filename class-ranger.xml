@@ -5,7 +5,7 @@
         <description>A from-scratch redesign of the Ranger class by u/laserllama, matching v4.4.4 of the Alternate Ranger (Knacks, Ranger's Quarry, and 9 Ranger Conclaves).</description>
         <author url="https://www.gmbinder.com/profile/laserllama">laserllama</author>
         <update version="4.4.4">
-            <file name="class-ranger.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/class-ranger.xml" />
+            <file name="class-ranger.xml" url="https://raw.githubusercontent.com/SaifElDin080/aurora-alternate-ranger/refs/heads/main/class-ranger.xml" />
         </update>
     </info>
     <element name="Ranger" type="Class" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CLASS_RANGER">
