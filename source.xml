@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>LaserLlama Alternate Ranger - Source</name>
+        <description>Source entry for LaserLlama's Alternate Ranger v4.4.4, a from-scratch redesign of the Ranger class.</description>
+        <author url="https://www.gmbinder.com/profile/laserllama">laserllama</author>
+        <update version="4.4.4">
+            <file name="source.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/source.xml" />
+        </update>
+    </info>
+
+    <element name="laserllama's Alternate Ranger v4.4.4" type="Source" id="ID_LLR_SOURCE">
+        <description>
+            <p>"Become the Master of the Wilderness You Were Meant to Be." A complete redesign of the Ranger class by u/laserllama, featuring Knacks, Ranger's Quarry, 10 Fighting Styles, 28 Knacks, and 9 reworked Ranger Conclaves: Beast Master, Deep Stalker, Drake Guard, Fey Wanderer, Hunter, Monster Slayer, Planar Warden, Spellbreaker, and Swarm Keeper.</p>
+            <p class="indent">Original PDF: <a href="https://www.gmbinder.com/profile/laserllama">gmbinder.com/profile/laserllama</a>. This is unofficial Fan Content permitted under the Fan Content Policy. Not approved or endorsed by Wizards of the Coast.</p>
+        </description>
+        <setters>
+            <set name="abbreviation">LLAR</set>
+        </setters>
+    </element>
+</elements>

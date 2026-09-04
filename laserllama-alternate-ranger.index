@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<update version="4.4.4">
+			<file name="laserllama-alternate-ranger.index" url="REPLACE_WITH_YOUR_HOSTED_URL/laserllama-alternate-ranger.index" />
+		</update>
+	</info>
+	<files>
+		<file name="source.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/source.xml" />
+		<file name="class-ranger.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/class-ranger.xml" />
+		<file name="ranger-conclaves.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/ranger-conclaves.xml" />
+	</files>
+</index>

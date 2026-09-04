@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>LaserLlama Alternate Ranger</name>
+        <description>A from-scratch redesign of the Ranger class by u/laserllama, matching v4.4.4 of the Alternate Ranger (Knacks, Ranger's Quarry, and 9 Ranger Conclaves).</description>
+        <author url="https://www.gmbinder.com/profile/laserllama">laserllama</author>
+        <update version="4.4.4">
+            <file name="class-ranger.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/class-ranger.xml" />
+        </update>
+    </info>
+    <element name="Ranger" type="Class" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CLASS_RANGER">
+        <description>
+
+            <p class="flavor">As the graying man made his way through the underbrush of the forest his faded green cloak made him nearly invisible. The monstrously large troll he had been stalking through the night had finally stopped to rest. As the great brute lay down to sleep, the silent green shape emerged from the trees to snuff out the life of the hideous monster.</p>
+            <p class="indent">As the massive blue dragon descended upon the small town, a small half-elven man rolled out of the path of a blast of lightning. With the small hairs on the back of his neck still standing up from the residual electricity, the practiced hunter nocked an arrow and let it fly in the direction of the terrible beast. As a horrible roar and the dart struck, the dragon let out a horrible roar and plummeted to the ground landing in a broken heap.</p>
+            <p class="indent">As the fearsome owlbear lumbered toward the tiny hamlet that she called home, a small halfling whistled to her companion in the brush. At her signal, a giant dog that seemed to be more than anything else leaped out from hiding and stood defiantly in front of the owlbear. Distracted by her partner, the owlbear was caught completely unawares by the diminutive ranger. Once their foe was unconscious, the halfling and her dog released the owlbear miles away where it could no longer menace the town they protected.</p>
+            <p class="indent">All three of the adventurers described here are considered Rangers, wild wanderers, and defenders of the natural world.</p>
+            <h4>DEFENDERS OF BALANCE</h4>
+            <p>Rangers spend their lives between two worlds. On one hand, they stand as guardians of civilization, protecting those who dwell on the edges of society. On the other, rangers are expert survivalists, deeply acquainted with the flora and fauna of the natural world. Rangers protect the balance between society and the wilderness. When a wild creature wanders from its natural habitat, Rangers will track it down before it can harm innocent farmers and travelers. When people encroach upon the wilderness, Rangers will push back against expansion that doesn't respect the natural balance.</p>
+            <p class="indent">Rangers dedicate their lives to guarding the places where civilization and the wilderness meet, never fully joining either of the worlds that they spend their lives defending.</p>
+            <h4>PREPARED FOR ANYTHING</h4>
+            <p>Ready to face any challenge, Rangers are survivalists at their core. The wilderness is a harsh place, and those who cannot adapt to their surroundings die. In the wild, Rangers learn to be adaptable. Drawing on their knowledge of the natural world, their connection to primal magic, and the skills passed down to them by their mentors, there is rarely a challenge a Ranger cannot overcome with enough time to prepare.</p>
+            <p class="indent">Each Ranger has their own philosophy on how they fit into the interconnected web that is the natural world. Some view themselves as apex predators, using their martial skills and ruthless hunting abilities to keep the wild in line. Others see themselves as humble servants of the natural world.</p>
+            <h4>CREATING YOUR RANGER</h4>
+            <p>Consider the nature of your Ranger's training. Did you train with a mentor, wandering the wilds together, learning all you could? Or did you forge your primal connection to the natural world on your own? What is it that motivates your Ranger? Do you have a vendetta against a certain type of monster? Are you a warrior of the wild who feels more comfortable in the silence of the forest than in city streets or sleepy towns?</p>
+            <p class="indent">No matter their origin, almost all Rangers take up a life of adventuring to impart their knowledge of the wild to the next generation. Often, in their later years, these warriors will take on an apprentice, passing on all their knowledge so that the safety of the wilderness is secured for years to come.</p>
+            <h5 class="caption">QUICK BUILD</h5>
+            <p>You can make a Ranger quickly by using these suggestions: First, make Dexterity your highest ability score, followed by your Wisdom. Second, choose the Outlander background.</p>
+            <h2>CLASS FEATURES</h2>
+            <p>As a Ranger, you gain the following class features.</p>
+            <h5 class="caption">HIT POINTS</h5>
+            <ul class="unstyled">
+                <li><strong>Hit Dice:</strong> 1d10 per Ranger level</li>
+                <li><strong>Hit Points at 1st Level:</strong> 10 + your Constitution modifier</li>
+                <li><strong>Hit Points at Higher Levels:</strong> 1d10 (or 6) + your Constitution modifier per Ranger level after 1st</li>
+            </ul>
+            <h5 class="caption">PROFICIENCIES</h5>
+            <ul class="unstyled mb">
+                <li><strong>Armor:</strong> Light armor, medium armor, shields</li>
+                <li><strong>Weapons:</strong> Simple weapons, martial weapons</li>
+                <li><strong>Tools:</strong> None</li>
+            </ul>
+            <ul class="unstyled">
+                <li><strong>Saving Throws:</strong> Strength, Dexterity</li>
+                <li><strong>Skills:</strong> Choose three from Animal Handling, Athletics, Insight, Investigation, Medicine, Nature, Perception, Sleight of Hand, Stealth, and Survival.</li>
+            </ul>
+            <h5 class="caption">EQUIPMENT</h5>
+            <p>As a Ranger, you start with the following equipment, in addition to the equipment granted by your background:</p>
+            <ul>
+                <li>(a) chain shirt and a shield or (b) leather armor</li>
+                <li>(a) two shortswords or (b) two simple melee weapons</li>
+                <li>(a) a longbow and 20 arrows or (b) a martial weapon</li>
+                <li>(a) a dungeoneer's pack or (b) an explorer's pack</li>
+            </ul>
+            <h5 class="caption">THE RANGER</h5>
+            <table class="class-features">
+                <thead>
+                    <tr><td class="col-5">Level</td><td class="col-5">PB</td><td class="left">Features</td><td class="col-10">Knacks Known</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td class="col-10">Quarry Die</td></tr>
+                </thead>
+                <tr><td> 1st</td><td>+2</td><td class="left">Fighting Style, Knacks</td><td>1</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td></tr>
+                <tr><td> 2nd</td><td>+2</td><td class="left">Ranger's Quarry, Spellcasting</td><td>2</td><td>2</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>d4</td></tr>
+                <tr><td> 3rd</td><td>+2</td><td class="left">Ranger Conclave</td><td>3</td><td>3</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>d4</td></tr>
+                <tr><td> 4th</td><td>+2</td><td class="left">Ability Score Improvement</td><td>3</td><td>3</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>d4</td></tr>
+                <tr><td> 5th</td><td>+3</td><td class="left">Extra Attack, Feral Senses</td><td>3</td><td>4</td><td>2</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>d4</td></tr>
+                <tr><td> 6th</td><td>+3</td><td class="left">&#8212;</td><td>4</td><td>4</td><td>2</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>d6</td></tr>
+                <tr><td> 7th</td><td>+3</td><td class="left">Conclave Feature</td><td>4</td><td>4</td><td>3</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>d6</td></tr>
+                <tr><td> 8th</td><td>+3</td><td class="left">Ability Score Improvement</td><td>4</td><td>4</td><td>3</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>d6</td></tr>
+                <tr><td> 9th</td><td>+4</td><td class="left">&#8212;</td><td>5</td><td>4</td><td>3</td><td>2</td><td>&#8212;</td><td>&#8212;</td><td>d6</td></tr>
+                <tr><td>10th</td><td>+4</td><td class="left">Tireless</td><td>5</td><td>4</td><td>3</td><td>2</td><td>&#8212;</td><td>&#8212;</td><td>d8</td></tr>
+                <tr><td>11th</td><td>+4</td><td class="left">Conclave Feature</td><td>5</td><td>4</td><td>3</td><td>3</td><td>&#8212;</td><td>&#8212;</td><td>d8</td></tr>
+                <tr><td>12th</td><td>+4</td><td class="left">Ability Score Improvement</td><td>6</td><td>4</td><td>3</td><td>3</td><td>&#8212;</td><td>&#8212;</td><td>d8</td></tr>
+                <tr><td>13th</td><td>+5</td><td class="left">&#8212;</td><td>6</td><td>4</td><td>3</td><td>3</td><td>1</td><td>&#8212;</td><td>d8</td></tr>
+                <tr><td>14th</td><td>+5</td><td class="left">&#8212;</td><td>7</td><td>4</td><td>3</td><td>3</td><td>1</td><td>&#8212;</td><td>d10</td></tr>
+                <tr><td>15th</td><td>+5</td><td class="left">Conclave Feature</td><td>7</td><td>4</td><td>3</td><td>3</td><td>2</td><td>&#8212;</td><td>d10</td></tr>
+                <tr><td>16th</td><td>+5</td><td class="left">Ability Score Improvement</td><td>8</td><td>4</td><td>3</td><td>3</td><td>2</td><td>&#8212;</td><td>d10</td></tr>
+                <tr><td>17th</td><td>+6</td><td class="left">&#8212;</td><td>8</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td><td>d10</td></tr>
+                <tr><td>18th</td><td>+6</td><td class="left">Feral Senses</td><td>9</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td><td>d12</td></tr>
+                <tr><td>19th</td><td>+6</td><td class="left">Ability Score Improvement</td><td>9</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>d12</td></tr>
+                <tr><td>20th</td><td>+6</td><td class="left">Foe Slayer</td><td>10</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>d12</td></tr>
+            </table>
+            <div element="ID_LLR_CF_FIGHTING_STYLE" />
+            <div element="ID_LLR_CF_KNACKS" />
+            <div element="ID_LLR_CF_QUARRY" />
+            <div element="ID_LLR_CF_SPELLCASTING" />
+            <div element="ID_LLR_CF_CONCLAVE" />
+            <div element="ID_LLR_CF_ASI" />
+            <div element="ID_LLR_CF_EXTRA_ATTACK" />
+            <div element="ID_LLR_CF_FERAL_SENSES" />
+            <div element="ID_LLR_CF_TIRELESS" />
+            <div element="ID_LLR_CF_FOE_SLAYER" />
+
+        </description>
+
+        <setters>
+            <set name="short">A martial warrior who calls on primal magic and honed knacks to hunt the monsters that threaten the wild and civilization alike.</set>
+            <set name="hd">d10</set>
+        </setters>
+        <sheet display="false" />
+
+        <multiclass id="ID_LLR_MULTICLASS_RANGER">
+            <prerequisite>Wisdom 13 and either Strength 13 or Dexterity 13</prerequisite>
+            <requirements>([str:13]||[dex:13]),[wis:13]</requirements>
+            <setters>
+                <set name="multiclass proficiencies">Light armor, medium armor, shields, simple weapons, martial weapons, and one skill from the ranger class skill list.</set>
+            </setters>
+            <rules>
+                <grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" />
+                <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+                <select type="Proficiency" name="Skill Proficiency, Ranger" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLING|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SLEIGHTOFHAND|ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_SURVIVAL" number="1" />
+            </rules>
+        </multiclass>
+
+        <rules>
+
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" requirements="!ID_LLR_MULTICLASS_RANGER" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" requirements="!ID_LLR_MULTICLASS_RANGER" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" requirements="!ID_LLR_MULTICLASS_RANGER" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" requirements="!ID_LLR_MULTICLASS_RANGER" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" requirements="!ID_LLR_MULTICLASS_RANGER" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" requirements="!ID_LLR_MULTICLASS_RANGER" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_LLR_MULTICLASS_RANGER" />
+            <select type="Proficiency" name="Skill Proficiency, Ranger" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLING|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SLEIGHTOFHAND|ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_SURVIVAL" number="3" requirements="!ID_LLR_MULTICLASS_RANGER" />
+            <grant type="Class Feature" id="ID_LLR_CF_FIGHTING_STYLE" level="1" />
+            <grant type="Class Feature" id="ID_LLR_CF_KNACKS" level="1" />
+            <grant type="Class Feature" id="ID_LLR_CF_QUARRY" level="2" />
+            <grant type="Class Feature" id="ID_LLR_CF_SPELLCASTING" level="2" />
+            <grant type="Class Feature" id="ID_LLR_CF_CONCLAVE" level="3" />
+            <grant type="Class Feature" id="ID_LLR_CF_ASI" level="4" />
+            <grant type="Class Feature" id="ID_LLR_CF_EXTRA_ATTACK" level="5" />
+            <grant type="Class Feature" id="ID_LLR_CF_FERAL_SENSES" level="5" />
+            <grant type="Class Feature" id="ID_LLR_CF_TIRELESS" level="10" />
+            <grant type="Class Feature" id="ID_LLR_CF_FOE_SLAYER" level="20" />
+
+        </rules>
+    </element>
+    <element name="Fighting Style" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CF_FIGHTING_STYLE">
+        <description>
+<p>At 1st level, you learn one Fighting Style of your choice from the list at the end of this class description. To learn a Fighting Style, you must meet any prerequisites it has, and you cannot learn the same Fighting Style more than once.</p>
+            <p class="indent">When you gain a level, you can replace this Fighting Style with another Fighting Style available to the Ranger class.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Class Feature" name="Fighting Style (Ranger)" supports="Fighting Style, Ranger LL" level="1" />
+        </rules>
+    </element>
+    <element name="Knacks" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CF_KNACKS">
+        <description>
+<p>In the wild, you glean bits of knowledge, known as Knacks, to bolster your hunting, tracking, and survival skills. At 1st level, you know one Knack of your choice from the list at the end of this class. To learn a Knack, you must meet any prerequisites it may have, such as proficiency in a skill or Ranger level.</p>
+            <p class="indent">When you gain a Ranger level, you can replace one Knack you know with another Knack of your choice, so long as you meet its prerequisites. You cannot replace a Knack if it is the prerequisite for another Knack that you know.</p>
+            <p class="indent">At certain Ranger levels, you learn additional Knacks, as shown in the Knacks Known column of the Ranger table.</p>
+        </description>
+        <sheet>
+            <description>When you gain a Ranger level, you can replace one Knack you know with another Knack of your choice, so long as you meet its prerequisites.</description>
+        </sheet>
+        <rules>
+            <select type="Class Feature" name="Knack (Level 1)" supports="Ranger Knack LL" level="1" />
+            <select type="Class Feature" name="Knack (Level 2)" supports="Ranger Knack LL" level="2" />
+            <select type="Class Feature" name="Knack (Level 3)" supports="Ranger Knack LL" level="3" />
+            <select type="Class Feature" name="Knack (Level 6)" supports="Ranger Knack LL" level="6" />
+            <select type="Class Feature" name="Knack (Level 9)" supports="Ranger Knack LL" level="9" />
+            <select type="Class Feature" name="Knack (Level 12)" supports="Ranger Knack LL" level="12" />
+            <select type="Class Feature" name="Knack (Level 14)" supports="Ranger Knack LL" level="14" />
+            <select type="Class Feature" name="Knack (Level 16)" supports="Ranger Knack LL" level="16" />
+            <select type="Class Feature" name="Knack (Level 18)" supports="Ranger Knack LL" level="18" />
+            <select type="Class Feature" name="Knack (Level 20)" supports="Ranger Knack LL" level="20" />
+        </rules>
+    </element>
+    <element name="Ranger's Quarry" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CF_QUARRY">
+        <description>
+<p>You can hone in on a foe like the great wild predators. At 2nd level, you can use your bonus action to mark one creature you can see as your Quarry, gaining certain benefits against it:</p>
+            <ul>
+                <li>Any time you hit your Quarry with an attack, you deal bonus damage equal to your Quarry Die, which is a d4.</li>
+                <li>If you make an ability check to track, analyze, or recall knowledge about it, add your Quarry Die to your roll.</li>
+            </ul>
+            <p>The creature remains your Quarry for 1 hour. The benefits end early if the Quarry is slain, or you mark another creature. If a feature uses your Quarry Die, always roll the Quarry Die.</p>
+            <p class="indent">You can use this feature a number of times equal to your Wisdom modifier (minimum of once), then you must expend a spell slot to use it again. You regain one use each time you finish a short rest, and all uses when you finish a long rest.</p>
+            <p class="indent">At certain levels, the size of your Quarry Die increases, as shown in the Quarry Die column of the Ranger class table.</p>
+        </description>
+        <sheet>
+            <description usage="{{wisdom:modifier}}/Long Rest">You can use your bonus action to mark one creature you can see as your Quarry. Any time you hit your Quarry with an attack, you deal bonus damage equal to your Quarry Die. If you make an ability check to track, analyze, or recall knowledge about it, add your Quarry Die to your roll. The creature remains your Quarry for 1 hour, or until it is slain or you mark another creature.</description>
+        </sheet>
+        <rules>
+            <stat name="ranger:quarry:die" value="4" />
+            <stat name="ranger:quarry:die" value="6" level="6" />
+            <stat name="ranger:quarry:die" value="8" level="10" />
+            <stat name="ranger:quarry:die" value="10" level="14" />
+            <stat name="ranger:quarry:die" value="12" level="18" />
+        </rules>
+    </element>
+    <element name="Spellcasting" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CF_SPELLCASTING">
+        <description>
+<p>Also at 2nd level, you learn to channel the primal magic of the natural world to enhance your survival and combat skills.</p>
+            <h5>PREPARING &amp; CASTING SPELLS</h5>
+            <p>During a long rest, you must spend 1 hour preparing the list of Ranger Spells that are available for you to cast. Choose a number of spells equal to your Wisdom modifier + half your Ranger level, rounded down. To prepare a spell, it must be of a level for which you have spell slots.</p>
+            <p class="indent">The Ranger class table shows the number and level of the spell slots you have to cast your spells. To cast a Ranger spell of 1st-level or higher, you expend a slot of that spell's level or higher. You regain all spell slots when you finish a long rest.</p>
+            <h5>SPELLCASTING FOCUS</h5>
+            <p>You can use a Druidic Focus as the spellcasting focus for your Ranger spells. See the <em>Player's Handbook</em> for example foci.</p>
+            <h5>RITUAL CASTING</h5>
+            <p>You can cast any Ranger spell you have prepared as a Ritual, so long as that spell has the Ritual tag.</p>
+            <h5>SPELLCASTING ABILITY</h5>
+            <p>Your power is drawn from your bond with nature, so Wisdom is your spellcasting ability. Use Wisdom when a spell refers to your Spellcasting ability, your Spell save DC, or a spell attack roll:</p>
+            <center>
+                <p><strong>Spell save DC</strong> = 8 + your Proficiency Bonus + your Wisdom modifier</p>
+                <p><strong>Spell attack modifier</strong> = your Proficiency Bonus + your Wisdom modifier</p>
+            </center>
+        </description>
+        <sheet display="false"><description>You have learned to channel the primal magic of nature to cast spells.</description></sheet>
+        <spellcasting name="Ranger" ability="Wisdom" prepare="true">
+            <list known="true">Ranger</list>
+        </spellcasting>
+        <rules>
+            <grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_HALF" requirements="ID_INTERNAL_GRANT_MULTICLASS"/>
+            <stat name="ranger:spellcasting:slots:1" value="2" level="2" />
+            <stat name="ranger:spellcasting:slots:1" value="1" level="3" />
+            <stat name="ranger:spellcasting:slots:1" value="1" level="5" />
+            <stat name="ranger:spellcasting:slots:2" value="2" level="5" />
+            <stat name="ranger:spellcasting:slots:2" value="1" level="7" />
+            <stat name="ranger:spellcasting:slots:3" value="2" level="9" />
+            <stat name="ranger:spellcasting:slots:3" value="1" level="11" />
+            <stat name="ranger:spellcasting:slots:4" value="1" level="13" />
+            <stat name="ranger:spellcasting:slots:4" value="1" level="15" />
+            <stat name="ranger:spellcasting:slots:4" value="1" level="17" />
+            <stat name="ranger:spellcasting:slots:5" value="1" level="17" />
+            <stat name="ranger:spellcasting:slots:5" value="1" level="19" />
+            <stat name="ranger:spellcasting:prepare" value="wisdom:modifier" />
+            <stat name="ranger:spellcasting:prepare" value="level:ranger:half" />
+        </rules>
+    </element>
+    <element name="Ranger Conclave" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CF_CONCLAVE">
+        <description>
+<p>At 3rd level, you choose your Conclave, a loose association of Rangers who share similar goals, from the following options: Beast Master, Deep Stalker, Drake Guard, Fey Wanderer, Hunter, Monster Slayer, Planar Warden, Spellbreaker, or Swarm Keeper, each detailed at the end of this class description.</p>
+            <p class="indent">Your Conclave grants features at 3rd, 7th, 11th, and 15th level. All Conclave features use your Ranger spell save DC.</p>
+            <h5>CONCLAVE SPELLS</h5>
+            <p>Ranger Conclaves have a list of Conclave Spells you always have prepared once you reach the Ranger levels noted in that Conclave's description. These spells count as Ranger spells for you, but they do not count against the spells you prepare.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Archetype" name="Ranger Conclave" supports="Ranger Conclave LL" />
+        </rules>
+    </element>
+    <element name="Ability Score Improvement" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CF_ASI">
+        <description>
+<p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one of your ability scores by 2, or two of your ability scores by 1. You cannot use this feature to increase your ability scores above 20. You gain this feature again at 8th, 12th, 16th, and 19th level.</p>
+        </description>
+        <compendium display="false" />
+        <sheet display="false" />
+        <rules>
+            <select type="Class Feature" name="Improvement Option (Ranger 4)" supports="Improvement Option,Ranger,4" level="4" />
+            <select type="Class Feature" name="Improvement Option (Ranger 8)" supports="Improvement Option,Ranger,8" level="8" />
+            <select type="Class Feature" name="Improvement Option (Ranger 12)" supports="Improvement Option,Ranger,12" level="12" />
+            <select type="Class Feature" name="Improvement Option (Ranger 16)" supports="Improvement Option,Ranger,16" level="16" />
+            <select type="Class Feature" name="Improvement Option (Ranger 19)" supports="Improvement Option,Ranger,19" level="19" />
+        </rules>
+    </element>
+    <element name="Extra Attack" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CF_EXTRA_ATTACK">
+        <description>
+<p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. Moreover, if you use your action to cast a Ranger spell, you can make a single weapon attack with your bonus action on that same turn.</p>
+        </description>
+        <sheet>
+            <description>You can attack twice, instead of once, whenever you take the Attack action on your turn. If you use your action to cast a Ranger spell, you can make a single weapon attack with your bonus action on that same turn.</description>
+        </sheet>
+        <rules>
+            <stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
+        </rules>
+    </element>
+    <element name="Feral Senses" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CF_FERAL_SENSES">
+        <description>
+<p>You hunt with the skill of an apex predator. At 5th level, you cannot have disadvantage on attack rolls against your Quarry.</p>
+            <p class="indent">When you reach 18th level, you cannot have disadvantage on attack rolls against any target that is within 30 feet of you.</p>
+        </description>
+        <sheet>
+            <description level="5">You cannot have disadvantage on attack rolls against your Quarry.</description>
+            <description level="18">You cannot have disadvantage on attack rolls against any target that is within 30 feet of you.</description>
+        </sheet>
+    </element>
+    <element name="Tireless" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CF_TIRELESS">
+        <description>
+<p>You are always prepared to hunt, never letting foes rest. Beginning at 10th level, you regain all uses of Ranger's Quarry whenever you finish a short or long rest.</p>
+        </description>
+        <sheet>
+            <description>You regain all uses of Ranger's Quarry whenever you finish a short or long rest.</description>
+        </sheet>
+    </element>
+    <element name="Foe Slayer" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_CF_FOE_SLAYER">
+        <description>
+<p>At 20th level, your skill rivals the great hunters of legend. When you hit your Quarry with a weapon attack, you can end your mark to cause it to deal the maximum possible damage, instead of rolling.</p>
+            <p class="indent">Should this special attack reduce your Quarry to 50 hit points or fewer, it must make a Constitution saving throw or be instantly reduced to 0 hit points.</p>
+        </description>
+        <sheet>
+            <description usage="1/Turn">When you hit your Quarry with a weapon attack, you can end your mark to cause it to deal the maximum possible damage, instead of rolling. Should this reduce your Quarry to 50 hit points or fewer, it must succeed on a Constitution saving throw or be instantly reduced to 0 hit points.</description>
+        </sheet>
+    </element>
+    <element name="Archery" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_FS_ARCHERY">
+        <supports>Fighting Style, Ranger LL</supports>
+        <prerequisite>Dexterity of 13 or higher</prerequisite>
+        <requirements>[dex:13]</requirements>
+        <description>
+<p>You gain a +1 bonus to attack rolls with ranged weapons, and your attacks with ranged weapons ignore half-cover and treat three-quarters cover as half-cover.</p>
+        </description>
+        <sheet>
+            <description>You gain a +1 bonus to attack rolls with ranged weapons, and your attacks with ranged weapons ignore half-cover and treat three-quarters cover as half-cover.</description>
+        </sheet>
+    </element>
+    <element name="Balanced Fighting" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_FS_BALANCED">
+        <supports>Fighting Style, Ranger LL</supports>
+        <description>
+<p>When wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to weapon damage rolls. You can use a shield and still gain this benefit.</p>
+        </description>
+        <sheet>
+            <description>When wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to weapon damage rolls. You can use a shield and still gain this benefit.</description>
+        </sheet>
+    </element>
+    <element name="Defensive Fighting" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_FS_DEFENSIVE">
+        <supports>Fighting Style, Ranger LL</supports>
+        <description>
+<p>When you are wearing medium armor, heavy armor, or a shield you gain a +1 bonus to your Armor Class.</p>
+        </description>
+        <sheet>
+            <description>When you are wearing medium armor, heavy armor, or a shield you gain a +1 bonus to your Armor Class.</description>
+        </sheet>
+        <rules>
+            <stat name="ac:misc" value="1" bonus="fighting style" equipped="[armor:medium]||[armor:heavy]||[shield:any]" alt="Defensive Fighting (Fighting Style)" />
+        </rules>
+    </element>
+    <element name="Dual Wielding" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_FS_DUAL_WIELDING">
+        <supports>Fighting Style, Ranger LL</supports>
+        <prerequisite>Strength or Dexterity of 13 or higher</prerequisite>
+        <requirements>([str:13]||[dex:13])</requirements>
+        <description>
+<p>While two-weapon fighting, you make your off-hand attack as part of the Attack action instead of your bonus action, and you add your ability modifier to the damage of this attack. You cannot also make an attack with your bonus action that turn.</p>
+        </description>
+        <sheet>
+            <description>While two-weapon fighting, you make your off-hand attack as part of the Attack action instead of your bonus action, and you add your ability modifier to the damage of this attack. You cannot also make an attack with your bonus action that turn.</description>
+        </sheet>
+    </element>
+    <element name="Featherweight Fighting" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_FS_FEATHERWEIGHT">
+        <supports>Fighting Style, Ranger LL</supports>
+        <prerequisite>Dexterity of 13, proficiency in Acrobatics</prerequisite>
+        <requirements>[dex:13]</requirements>
+        <description>
+<p>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to damage rolls with light melee weapons and unarmed strikes.</p>
+        </description>
+        <sheet>
+            <description>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to damage rolls with light melee weapons and unarmed strikes.</description>
+        </sheet>
+        <rules>
+            <stat name="speed" value="10" requirements="!ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR:equipped, !ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR:equipped" />
+        </rules>
+    </element>
+    <element name="Hurler" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_FS_HURLER">
+        <supports>Fighting Style, Ranger LL</supports>
+        <prerequisite>Strength or Dexterity of 11 or higher</prerequisite>
+        <requirements>([str:11]||[dex:11])</requirements>
+        <description>
+<p>You can draw a Thrown weapon as part of each ranged attack you make, and the range of your thrown attacks is doubled. When wielding only Thrown weapons, you can make one ranged attack with a Thrown weapon as a bonus action.</p>
+        </description>
+        <sheet>
+            <description>You can draw a Thrown weapon as part of each ranged attack you make, and the range of your thrown attacks is doubled. When wielding only Thrown weapons, you can make one ranged attack with a Thrown weapon as a bonus action.</description>
+        </sheet>
+    </element>
+    <element name="Mariner" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_FS_MARINER">
+        <supports>Fighting Style, Ranger LL</supports>
+        <prerequisite>proficiency in Athletics</prerequisite>
+        <description>
+<p>When you are not wearing heavy armor or a shield, you have a swimming speed equal to your walking speed, and you gain a +1 bonus to your Armor Class.</p>
+        </description>
+        <sheet>
+            <description>When you are not wearing heavy armor or a shield, you have a swimming speed equal to your walking speed, and you gain a +1 bonus to your Armor Class.</description>
+        </sheet>
+        <rules>
+            <stat name="speed:swim" value="speed" requirements="!ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR:equipped, !ID_PROFICIENCY_SHIELD:equipped" />
+        </rules>
+    </element>
+    <element name="Mountaineer" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_FS_MOUNTAINEER">
+        <supports>Fighting Style, Ranger LL</supports>
+        <prerequisite>proficiency in Athletics</prerequisite>
+        <description>
+<p>So long as you are not wearing heavy armor or a shield, you have a climbing speed equal to your walking speed, and you gain a +1 bonus to your Armor Class. Also, whenever you take falling damage, you can use your reaction to reduce the damage by twice your level.</p>
+        </description>
+        <sheet>
+            <description>So long as you are not wearing heavy armor or a shield, you have a climbing speed equal to your walking speed, and you gain a +1 bonus to your Armor Class. Also, whenever you take falling damage, you can use your reaction to reduce the damage by twice your level.</description>
+        </sheet>
+        <rules>
+            <stat name="speed:climb" value="speed" requirements="!ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR:equipped, !ID_PROFICIENCY_SHIELD:equipped" />
+        </rules>
+    </element>
+    <element name="Strongbow" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_FS_STRONGBOW">
+        <supports>Fighting Style, Ranger LL</supports>
+        <prerequisite>Strength of 13 or higher</prerequisite>
+        <requirements>[str:13]</requirements>
+        <description>
+<p>You can use your Strength modifier, in place of Dexterity, for attack and damage rolls with longbows and shortbows. When you do so, you gain a +1 to damage rolls with those weapons.</p>
+        </description>
+        <sheet>
+            <description>You can use your Strength modifier, in place of Dexterity, for attack and damage rolls with longbows and shortbows. When you do so, you gain a +1 to damage rolls with those weapons.</description>
+        </sheet>
+    </element>
+    <element name="Versatile Fighting" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_FS_VERSATILE">
+        <supports>Fighting Style, Ranger LL</supports>
+        <prerequisite>Strength or Dexterity of 11 or higher</prerequisite>
+        <requirements>([str:11]||[dex:11])</requirements>
+        <description>
+<p>While wielding a single Versatile weapon and no shield, you gain a +1 bonus to your attack rolls with that weapon. While doing so, you can use your bonus action to make a grapple or shove attack, or to take the Use an Object action.</p>
+        </description>
+        <sheet>
+            <description>While wielding a single Versatile weapon and no shield, you gain a +1 bonus to your attack rolls with that weapon. While doing so, you can use your bonus action to make a grapple or shove attack, or to take the Use an Object action.</description>
+        </sheet>
+    </element>
+    <element name="Alpine Adept" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_ALPINE_ADEPT">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>proficiency in Athletics</prerequisite>
+        <requirements>ID_PROFICIENCY_SKILL_ATHLETICS</requirements>
+        <description>
+<p><em>Prerequisite:</em> proficiency in Athletics</p><p>You are an expert climber. You gain a 30-foot climbing speed and resistance to bludgeoning damage you take from falling. If you already have a climbing speed, it increases by 10 feet. Finally, you can add double your Proficiency Bonus to any Athletics checks that you make.</p>
+        </description>
+        <sheet>
+            <description>You are an expert climber. You gain a 30-foot climbing speed and resistance to bludgeoning damage you take from falling. If you already have a climbing speed, it increases by 10 feet. Finally, you can add double your Proficiency Bonus to any Athletics checks that you make.</description>
+        </sheet>
+        <rules>
+            <stat name="speed:climb" value="30" bonus="base" requirements="[speed:climb:0]" />
+            <stat name="speed:climb" value="10" requirements="![speed:climb:0]" />
+            <stat name="expertise" value="ID_PROFICIENCY_SKILL_ATHLETICS" />
+        </rules>
+    </element>
+    <element name="Aquatic Adept" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_AQUATIC_ADEPT">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>proficiency in Athletics</prerequisite>
+        <requirements>ID_PROFICIENCY_SKILL_ATHLETICS</requirements>
+        <description>
+<p><em>Prerequisite:</em> proficiency in Athletics</p><p>You can swim through the water like a native creature of the sea. You gain a swimming speed of 30 feet, and you can hold your breath for twice as long underwater. If you already have a swimming speed, it increases by 10 feet. Finally, you can add double your Proficiency Bonus to any Athletics checks that you make.</p>
+        </description>
+        <sheet>
+            <description>You can swim through the water like a native creature of the sea. You gain a swimming speed of 30 feet, and you can hold your breath for twice as long underwater. If you already have a swimming speed, it increases by 10 feet. Finally, you can add double your Proficiency Bonus to any Athletics checks that you make.</description>
+        </sheet>
+        <rules>
+            <stat name="speed:swim" value="30" bonus="base" requirements="[speed:swim:0]" />
+            <stat name="speed:swim" value="10" requirements="![speed:swim:0]" />
+            <stat name="expertise" value="ID_PROFICIENCY_SKILL_ATHLETICS" />
+        </rules>
+    </element>
+    <element name="Favored Foe" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_FAVORED_FOE">
+        <supports>Ranger Knack LL</supports>
+        <requirements>[level:ranger:1]</requirements>
+        <description>
+<p>You are especially adept at studying, tracking, and hunting a specific type of enemy. Choose one creature type, two races of Humanoid (such as Gnolls and Orcs), or one organization (like a thieves' guild or an evil cult) as your Favored Foe. When you make an ability check to recall knowledge, hunt, or track a Favored Foe, treat a d20 roll of 9 or lower as a 10. You can learn this Knack more than once, but you choose a new Favored Foe each time that you learn it.</p>
+        </description>
+        <sheet>
+            <description>You are especially adept at studying, tracking, and hunting a specific type of enemy. Choose one creature type, two races of Humanoid (such as Gnolls and Orcs), or one organization (like a thieves' guild or an evil cult) as your Favored Foe. When you make an ability check to recall knowledge, hunt, or track a Favored Foe, treat a d20 roll of 9 or lower as a 10. You can learn this Knack more than once, but you choose a new Favored Foe each time that you learn it.</description>
+        </sheet>
+    </element>
+    <element name="Herbalist I" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_HERBALIST_1">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>proficiency in Medicine</prerequisite>
+        <requirements>ID_PROFICIENCY_SKILL_MEDICINE</requirements>
+        <description>
+<p><em>Prerequisite:</em> proficiency in Medicine</p><p>You have an extensive knowledge of plants and their healing properties. You have advantage on Intelligence (Nature) checks to identify the medicinal properties of plants, and Wisdom (Medicine) checks made to stabilize creatures. Finally, you can add double your Proficiency Bonus to any Medicine or Herbalism Kit checks that you make.</p>
+        </description>
+        <sheet>
+            <description>You have an extensive knowledge of plants and their healing properties. You have advantage on Intelligence (Nature) checks to identify the medicinal properties of plants, and Wisdom (Medicine) checks made to stabilize creatures. Finally, you can add double your Proficiency Bonus to any Medicine or Herbalism Kit checks that you make.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+            <stat name="expertise" value="ID_PROFICIENCY_SKILL_MEDICINE" />
+        </rules>
+    </element>
+    <element name="Herbalist II" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_HERBALIST_2">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>3rd-level Ranger, Herbalist I</prerequisite>
+        <requirements>[level:ranger:3], ID_LLR_KNACK_HERBALIST_1</requirements>
+        <description>
+<p><em>Prerequisite:</em> 3rd-level Ranger, Herbalist I</p><p>You have learned to use natural plants and herbs to create healing salves. Over the course of a long rest, you can spend 1 hour using a Herbalism Kit to create one potion of healing, which retains its potency until the end of your next long rest.</p>
+        </description>
+        <sheet>
+            <description>You have learned to use natural plants and herbs to create healing salves. Over the course of a long rest, you can spend 1 hour using a Herbalism Kit to create one potion of healing, which retains its potency until the end of your next long rest.</description>
+        </sheet>
+    </element>
+    <element name="Herbalist III" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_HERBALIST_3">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>6th-level Ranger, Herbalist I, II</prerequisite>
+        <requirements>[level:ranger:6], ID_LLR_KNACK_HERBALIST_1, ID_LLR_KNACK_HERBALIST_2</requirements>
+        <description>
+<p><em>Prerequisite:</em> 6th-level Ranger, Herbalist I, II</p><p>When you use your Herbalism Kit to craft potions of healing during a long rest, you craft a number of these potions equal to 1 + your Wisdom modifier (minimum of 2).</p>
+        </description>
+        <sheet>
+            <description>When you use your Herbalism Kit to craft potions of healing during a long rest, you craft a number of these potions equal to 1 + your Wisdom modifier (minimum of 2).</description>
+        </sheet>
+    </element>
+    <element name="Naturalist I" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_NATURALIST_1">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>proficiency in Nature</prerequisite>
+        <requirements>ID_PROFICIENCY_SKILL_NATURE</requirements>
+        <description>
+<p><em>Prerequisite:</em> proficiency in Nature</p><p>You are an intuitive scholar of the wild. You use Wisdom, in place of Intelligence, for Nature checks. Also, you can use a bonus action on each of your turns to make a Nature check to recall knowledge about one Beast or Plant you can see. Finally, you can add double your Proficiency Bonus to any Nature checks that you make.</p>
+        </description>
+        <sheet>
+            <description>You are an intuitive scholar of the wild. You use Wisdom, in place of Intelligence, for Nature checks. Also, you can use a bonus action on each of your turns to make a Nature check to recall knowledge about one Beast or Plant you can see. Finally, you can add double your Proficiency Bonus to any Nature checks that you make.</description>
+        </sheet>
+        <rules>
+            <stat name="expertise" value="ID_PROFICIENCY_SKILL_NATURE" />
+        </rules>
+    </element>
+    <element name="Naturalist II" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_NATURALIST_2">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>9th-level Ranger, Naturalist I</prerequisite>
+        <requirements>[level:ranger:9], ID_LLR_KNACK_NATURALIST_1</requirements>
+        <description>
+<p><em>Prerequisite:</em> 9th-level Ranger, Naturalist I</p><p>Your understanding grants you a mystical connection to the natural world. At the end of each short or long rest, you gain benefits as if you had cast the commune with nature spell.</p>
+        </description>
+        <sheet>
+            <description>Your understanding grants you a mystical connection to the natural world. At the end of each short or long rest, you gain benefits as if you had cast the commune with nature spell.</description>
+        </sheet>
+    </element>
+    <element name="Natural Regeneration" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_NATURAL_REGENERATION">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>3rd-level Ranger</prerequisite>
+        <requirements>[level:ranger:3]</requirements>
+        <description>
+<p><em>Prerequisite:</em> 3rd-level Ranger</p><p>During a short rest, you can recover spell slots of a combined level equal to your Wisdom modifier (minimum one 1st-level). Once you regain spell slots this way, you must complete a long rest before you can use this feature again.</p>
+        </description>
+        <sheet>
+            <description>During a short rest, you can recover spell slots of a combined level equal to {{wisdom:modifier}} (minimum one 1st-level). Once you regain spell slots this way, you must complete a long rest before you can use this feature again.</description>
+        </sheet>
+    </element>
+    <element name="Slayer I" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_SLAYER_1">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>3rd-level Ranger, proficiency in Perception</prerequisite>
+        <requirements>[level:ranger:3], ID_PROFICIENCY_SKILL_PERCEPTION</requirements>
+        <description>
+<p><em>Prerequisite:</em> 3rd-level Ranger, proficiency in Perception</p><p>When you hit a creature with an attack, you can mark it as your Quarry as normal, expending a use of Ranger's Quarry and applying the bonus damage and other benefits on hit. Finally, you can add double your Proficiency Bonus to any Perception checks that you make.</p>
+        </description>
+        <sheet>
+            <description>When you hit a creature with an attack, you can mark it as your Quarry as normal, expending a use of Ranger's Quarry and applying the bonus damage and other benefits on hit. Finally, you can add double your Proficiency Bonus to any Perception checks that you make.</description>
+        </sheet>
+        <rules>
+            <stat name="expertise" value="ID_PROFICIENCY_SKILL_PERCEPTION" />
+        </rules>
+    </element>
+    <element name="Slayer II" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_SLAYER_2">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>6th-level Ranger, Slayer I</prerequisite>
+        <requirements>[level:ranger:6], ID_LLR_KNACK_SLAYER_1</requirements>
+        <description>
+<p><em>Prerequisite:</em> 6th-level Ranger, Slayer I</p><p>Your tracking abilities have become supernaturally accurate. You can mark a creature as your Quarry if you have seen signs of its passing, like tracks, left within the past 24 hours. Also, when you mark a creature as your Quarry, the mark lasts indefinitely and only ends if you mark another creature.</p>
+        </description>
+        <sheet>
+            <description>Your tracking abilities have become supernaturally accurate. You can mark a creature as your Quarry if you have seen signs of its passing, like tracks, left within the past 24 hours. Also, when you mark a creature as your Quarry, the mark lasts indefinitely and only ends if you mark another creature.</description>
+        </sheet>
+    </element>
+    <element name="Slayer III" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_SLAYER_3">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>14th-level Ranger, Slayer I, II</prerequisite>
+        <requirements>[level:ranger:14], ID_LLR_KNACK_SLAYER_1, ID_LLR_KNACK_SLAYER_2</requirements>
+        <description>
+<p><em>Prerequisite:</em> 14th-level Ranger, Slayer I, II</p><p>Once on each of your turns when you hit your Quarry with an attack, you can force it to make a Constitution saving throw. On a failed save, you choose if it is Blinded, Deafened, unable to speak, or Restrained until the start of your following turn.</p>
+        </description>
+        <sheet>
+            <description>Once on each of your turns when you hit your Quarry with an attack, you can force it to make a Constitution saving throw. On a failed save, you choose if it is Blinded, Deafened, unable to speak, or Restrained until the start of your following turn.</description>
+        </sheet>
+    </element>
+    <element name="Stalker I" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_STALKER_1">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>proficiency in Stealth</prerequisite>
+        <requirements>ID_PROFICIENCY_SKILL_STEALTH</requirements>
+        <description>
+<p><em>Prerequisite:</em> proficiency in Stealth</p><p>You are a master at remaining undetected in the wilderness. You have advantage on Stealth checks you make to hide while you are in natural environments. Finally, you can add double your Proficiency Bonus to any Stealth checks that you make.</p>
+        </description>
+        <sheet>
+            <description>You are a master at remaining undetected in the wilderness. You have advantage on Stealth checks you make to hide while you are in natural environments. Finally, you can add double your Proficiency Bonus to any Stealth checks that you make.</description>
+        </sheet>
+        <rules>
+            <stat name="expertise" value="ID_PROFICIENCY_SKILL_STEALTH" />
+        </rules>
+    </element>
+    <element name="Stalker II" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_STALKER_2">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>3rd-level Ranger, Stalker I</prerequisite>
+        <requirements>[level:ranger:3], ID_LLR_KNACK_STALKER_1</requirements>
+        <description>
+<p><em>Prerequisite:</em> 3rd-level Ranger, Stalker I</p><p>You have learned to hunt your prey while remaining unseen. You can take the Hide action as a bonus action on your turn.</p>
+        </description>
+        <sheet>
+            <description>You can take the Hide action as a bonus action on your turn.</description>
+        </sheet>
+    </element>
+    <element name="Stalker III" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_STALKER_3">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>9th-level Ranger, Stalker I, II</prerequisite>
+        <requirements>[level:ranger:9], ID_LLR_KNACK_STALKER_1, ID_LLR_KNACK_STALKER_2</requirements>
+        <description>
+<p><em>Prerequisite:</em> 9th-level Ranger, Stalker I, II</p><p>You cannot be tracked, even by magic. You are always under the effects of the nondetection spell, and you can't be tracked by Divination magic or magical means unless you wish to be.</p>
+        </description>
+        <sheet>
+            <description>You cannot be tracked, even by magic. You are always under the effects of the nondetection spell, and you can't be tracked by Divination magic or magical means unless you wish to be.</description>
+        </sheet>
+    </element>
+    <element name="Stalker IV" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_STALKER_4">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>14th-level Ranger, Stalker I, II, III</prerequisite>
+        <requirements>[level:ranger:14], ID_LLR_KNACK_STALKER_1, ID_LLR_KNACK_STALKER_2, ID_LLR_KNACK_STALKER_3</requirements>
+        <description>
+<p><em>Prerequisite:</em> 14th-level Ranger, Stalker I, II, III</p><p>Your mythic skill allows you to become undetectable. Any time you take a Hide action, you, and anything you are wearing or carrying, becomes invisible until the start of your next turn. This effect instantly ends if you cast a spell, or you attack or force a creature to make an ability check or saving throw.</p>
+        </description>
+        <sheet>
+            <description>Your mythic skill allows you to become undetectable. Any time you take a Hide action, you, and anything you are wearing or carrying, becomes invisible until the start of your next turn. This effect instantly ends if you cast a spell, or you attack or force a creature to make an ability check or saving throw.</description>
+        </sheet>
+    </element>
+    <element name="Strider I" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_STRIDER_1">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>proficiency in Survival</prerequisite>
+        <requirements>ID_PROFICIENCY_SKILL_SURVIVAL</requirements>
+        <description>
+<p><em>Prerequisite:</em> proficiency in Survival</p><p>You ignore the effects of difficult terrain imposed by natural environments, you cannot become lost so long as you can see the night sky, and you and up to 10 creatures who travel with you don't have your travel slowed by natural difficult terrain. Finally, you can add double your Proficiency Bonus to any Survival checks that you make.</p>
+        </description>
+        <sheet>
+            <description>You ignore the effects of difficult terrain imposed by natural environments, you cannot become lost so long as you can see the night sky, and you and up to 10 creatures who travel with you don't have your travel slowed by natural difficult terrain. Finally, you can add double your Proficiency Bonus to any Survival checks that you make.</description>
+        </sheet>
+        <rules>
+            <stat name="expertise" value="ID_PROFICIENCY_SKILL_SURVIVAL" />
+        </rules>
+    </element>
+    <element name="Strider II" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_STRIDER_2">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>3rd-level Ranger, Strider I</prerequisite>
+        <requirements>[level:ranger:3], ID_LLR_KNACK_STRIDER_1</requirements>
+        <description>
+<p><em>Prerequisite:</em> 3rd-level Ranger, Strider I</p><p>Once in your sights, you pursue your foes relentlessly. You can take the Dash action as a bonus action on your turn.</p>
+        </description>
+        <sheet>
+            <description>You can take the Dash action as a bonus action on your turn.</description>
+        </sheet>
+    </element>
+    <element name="Strider III" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_STRIDER_3">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>6th-level Ranger, Strider I, II</prerequisite>
+        <requirements>[level:ranger:6], ID_LLR_KNACK_STRIDER_1, ID_LLR_KNACK_STRIDER_2</requirements>
+        <description>
+<p><em>Prerequisite:</em> 6th-level Ranger, Strider I, II</p><p>You can surmount almost any obstacle that would block your path. Your walking speed increases by 10 feet, and you ignore the effects of difficult terrain imposed by any spell, magical phenomena, or any other magical effect.</p>
+        </description>
+        <sheet>
+            <description>You ignore the effects of difficult terrain imposed by any spell, magical phenomena, or any other magical effect.</description>
+        </sheet>
+        <rules>
+            <stat name="speed" value="10" />
+        </rules>
+    </element>
+    <element name="Strider IV" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_STRIDER_4">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>14th-level Ranger, Strider I, II, III</prerequisite>
+        <requirements>[level:ranger:14], ID_LLR_KNACK_STRIDER_1, ID_LLR_KNACK_STRIDER_2, ID_LLR_KNACK_STRIDER_3</requirements>
+        <description>
+<p><em>Prerequisite:</em> 14th-level Ranger, Strider I, II, III</p><p>You move through the world unhindered by even the most powerful magic and restraints. You are always under the effects of the freedom of movement spell while conscious.</p>
+        </description>
+        <sheet>
+            <description>You move through the world unhindered by even the most powerful magic and restraints. You are always under the effects of the freedom of movement spell while conscious.</description>
+        </sheet>
+    </element>
+    <element name="Student of the Wild" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_STUDENT_OF_THE_WILD">
+        <supports>Ranger Knack LL</supports>
+        <requirements>[level:ranger:1]</requirements>
+        <description>
+<p>Time in the wild has honed your skills. You gain proficiency in two skills of your choice from the Ranger class skill list. You can learn this Knack more than once, but you choose two new Ranger class skills each time that you learn it.</p>
+        </description>
+        <sheet>
+            <description>Time in the wild has honed your skills. You gain proficiency in two skills of your choice from the Ranger class skill list. You can learn this Knack more than once, but you choose two new Ranger class skills each time that you learn it.</description>
+        </sheet>
+        <rules>
+            <select type="Proficiency" name="Student of the Wild" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLING|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SLEIGHTOFHAND|ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_SURVIVAL" number="2" />
+        </rules>
+    </element>
+    <element name="Survivor I" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_SURVIVOR_1">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>6th-level Ranger</prerequisite>
+        <requirements>[level:ranger:6]</requirements>
+        <description>
+<p><em>Prerequisite:</em> 6th-level Ranger</p><p>Your time in the wilds has hardened your body. As a bonus action on your turn, you can grant yourself temporary hit points equal to your Constitution modifier (minimum of 1).</p>
+        </description>
+        <sheet>
+            <description>As a bonus action on your turn, you can grant yourself {{constitution:modifier}} temporary hit points (minimum of 1).</description>
+        </sheet>
+    </element>
+    <element name="Survivor II" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_SURVIVOR_2">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>9th-level Ranger, Survivor I</prerequisite>
+        <requirements>[level:ranger:9], ID_LLR_KNACK_SURVIVOR_1</requirements>
+        <description>
+<p><em>Prerequisite:</em> 9th-level Ranger, Survivor I</p><p>Your body can rapidly recover from injury. When you expend a Hit Die to regain hit points, you regain additional hit points equal to your Wisdom modifier (minimum of 1 hit point).</p>
+        </description>
+        <sheet>
+            <description>When you expend a Hit Die to regain hit points, you regain additional hit points equal to {{wisdom:modifier}} (minimum of 1 hit point).</description>
+        </sheet>
+    </element>
+    <element name="Survivor III" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_SURVIVOR_3">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>14th-level Ranger, Survivor I, II</prerequisite>
+        <requirements>[level:ranger:14], ID_LLR_KNACK_SURVIVOR_1, ID_LLR_KNACK_SURVIVOR_2</requirements>
+        <description>
+<p><em>Prerequisite:</em> 14th-level Ranger, Survivor I, II</p><p>When you make a death saving throw, you add your Wisdom modifier to the roll (minimum of +1). If the result of your roll is 20 or higher, it is as if you had rolled a 20 on the d20.</p>
+        </description>
+        <sheet>
+            <description>When you make a death saving throw, you add {{wisdom:modifier}} to the roll (minimum of +1). If the result of your roll is 20 or higher, it is as if you had rolled a 20 on the d20.</description>
+        </sheet>
+    </element>
+    <element name="Trapper I" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_TRAPPER_1">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>proficiency in Sleight of Hand</prerequisite>
+        <requirements>ID_PROFICIENCY_SKILL_SLEIGHTOFHAND</requirements>
+        <description>
+<p><em>Prerequisite:</em> proficiency in Sleight of Hand</p><p>You craft traps from materials on hand. You also add double your Proficiency Bonus to your Sleight of Hand checks. Crafting a Trap: Over the course of 1 hour, which can be during a short or long rest, using a knife, natural materials, and 10 feet of rope, you craft one Trap. It remains until the end of your next long rest, when it breaks down. Setting a Trap: As an action, you can place one Trap in an adjacent, unoccupied 5-foot space. The first Large or smaller creature that moves into the Trap's space must succeed on a Dexterity saving throw or become Restrained by the Trap. As an action, the Restrained creature, or a creature within 5 feet, can make a Strength check (DC equal to your Spell save DC). On a success, the creature is freed and the Trap is destroyed. Hiding a Trap: As an action (separate from setting it), you can hide a Trap. Creatures have disadvantage on their saving throws against Traps if they are unaware of them. To detect a hidden Trap, a creature must make a successful Investigation or Perception check against your Spell save DC.</p>
+        </description>
+        <sheet>
+            <description>You craft traps from materials on hand. You also add double your Proficiency Bonus to your Sleight of Hand checks. Crafting a Trap: Over the course of 1 hour, which can be during a short or long rest, using a knife, natural materials, and 10 feet of rope, you craft one Trap. It remains until the end of your next long rest, when it breaks down. Setting a Trap: As an action, you can place one Trap in an adjacent, unoccupied 5-foot space. The first Large or smaller creature that moves into the Trap's space must succeed on a Dexterity saving throw or become Restrained by the Trap. As an action, the Restrained creature, or a creature within 5 feet, can make a Strength check (DC equal to your Spell save DC). On a success, the creature is freed and the Trap is destroyed. Hiding a Trap: As an action (separate from setting it), you can hide a Trap. Creatures have disadvantage on their saving throws against Traps if they are unaware of them. To detect a hidden Trap, a creature must make a successful Investigation or Perception check against your Spell save DC.</description>
+        </sheet>
+        <rules>
+            <stat name="expertise" value="ID_PROFICIENCY_SKILL_SLEIGHTOFHAND" />
+        </rules>
+    </element>
+    <element name="Trapper II" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_TRAPPER_2">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>6th-level Ranger, Trapper I</prerequisite>
+        <requirements>[level:ranger:6], ID_LLR_KNACK_TRAPPER_1</requirements>
+        <description>
+<p><em>Prerequisite:</em> 6th-level Ranger, Trapper I</p><p>Your skills as a Trapper have grown. So long as you have enough natural material and rope, you can craft up to three Traps in 1 hour, and once you set your Traps, they last until triggered or destroyed.</p>
+        </description>
+        <sheet>
+            <description>Your skills as a Trapper have grown. So long as you have enough natural material and rope, you can craft up to three Traps in 1 hour, and once you set your Traps, they last until triggered or destroyed.</description>
+        </sheet>
+    </element>
+    <element name="Wild Insight I" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_WILD_INSIGHT_1">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>proficiency in Insight</prerequisite>
+        <requirements>ID_PROFICIENCY_SKILL_INSIGHT</requirements>
+        <description>
+<p><em>Prerequisite:</em> proficiency in Insight</p><p>You have a natural way with the wild animals of the world. You can communicate simple ideas to beasts using sounds and gestures, and you have advantage on any Wisdom (Animal Handling) checks you make targeting animals that are already friendly towards you.</p>
+        </description>
+        <sheet>
+            <description>You have a natural way with the wild animals of the world. You can communicate simple ideas to beasts using sounds and gestures, and you have advantage on any Wisdom (Animal Handling) checks you make targeting animals that are already friendly towards you.</description>
+        </sheet>
+    </element>
+    <element name="Wild Insight II" type="Class Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_KNACK_WILD_INSIGHT_2">
+        <supports>Ranger Knack LL</supports>
+        <prerequisite>3rd-level Ranger, Wild Insight I</prerequisite>
+        <requirements>[level:ranger:3], ID_LLR_KNACK_WILD_INSIGHT_1</requirements>
+        <description>
+<p><em>Prerequisite:</em> 3rd-level Ranger, Wild Insight I</p><p>Your familiarity with the natural world has allowed you to bond with a minor spirit of nature. You learn the find familiar spell. It counts as a Ranger spell for you and you always have it prepared, but it doesn't count against the total number of spells you prepare each day. When you cast this spell, your familiar is a fey creature.</p>
+        </description>
+        <sheet>
+            <description>When you cast the find familiar spell, your familiar is a fey creature.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_FIND_FAMILIAR" spellcasting="Ranger" prepared="true" />
+        </rules>
+    </element>
+</elements>

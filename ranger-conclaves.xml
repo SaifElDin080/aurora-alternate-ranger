@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>LaserLlama Alternate Ranger - Conclaves</name>
+        <description>The 9 Ranger Conclaves for LaserLlama's Alternate Ranger v4.4.4: Beast Master, Deep Stalker, Drake Guard, Fey Wanderer, Hunter, Monster Slayer, Planar Warden, Spellbreaker, and Swarm Keeper.</description>
+        <author url="https://www.gmbinder.com/profile/laserllama">laserllama</author>
+        <update version="4.4.4">
+            <file name="ranger-conclaves.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/ranger-conclaves.xml" />
+        </update>
+    </info>
+    <element name="Beast Master" type="Archetype" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_ARCH_BEAST_MASTER">
+        <supports>Ranger Conclave LL</supports>
+        <description>
+<p>In their role as guardians of nature, some Rangers form deep connections with the beasts of the wild. In recognition of this relationship, great spirits of the wild known as Primal Beasts will seek out Rangers and form a primal bond. Together, Master and Beast stand together to defend the natural world.</p>
+            <div element="ID_LLR_AF_BEASTMASTER_MAGIC" />
+            <div element="ID_LLR_AF_BEASTMASTER_PRIMAL_BEAST" />
+            <div element="ID_LLR_AF_BEASTMASTER_WILD_EMPATHY" />
+            <div element="ID_LLR_AF_BEASTMASTER_BESTIAL_FOCUS" />
+            <div element="ID_LLR_AF_BEASTMASTER_EXCEPTIONAL_TRAINING" />
+            <div element="ID_LLR_AF_BEASTMASTER_PRIMAL_BOND" />
+        </description>
+        <sheet display="false"><description>Rangers who form deep connections with the beasts of the wild, gaining a Primal Beast companion.</description></sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LLR_AF_BEASTMASTER_MAGIC" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_BEASTMASTER_PRIMAL_BEAST" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_BEASTMASTER_WILD_EMPATHY" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_BEASTMASTER_BESTIAL_FOCUS" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_BEASTMASTER_EXCEPTIONAL_TRAINING" level="11" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_BEASTMASTER_PRIMAL_BOND" level="15" />
+        </rules>
+    </element>
+    <element name="Beast Master Spells" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_BEASTMASTER_MAGIC">
+        <description>
+<p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the table below. The spell counts as a Ranger spell for you, but it doesn't count against the number of Ranger spells you can prepare.</p><h5>CONCLAVE SPELLS</h5>
+            <table>
+                <thead><tr><td>Ranger Level</td><td>Spell</td></tr></thead>
+                <tr><td>3</td><td><em>animal friendship, beast bond</em></td></tr>
+                <tr><td>5</td><td><em>beast sense, warding bond</em></td></tr>
+                <tr><td>9</td><td><em>haste, protection from energy</em></td></tr>
+                <tr><td>13</td><td><em>death ward, freedom of movement</em></td></tr>
+                <tr><td>17</td><td><em>awaken, commune with nature</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_ANIMAL_FRIENDSHIP" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_BEAST_BOND" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_BEAST_SENSE" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_WARDING_BOND" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_HASTE" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_ENERGY" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FREEDOM_OF_MOVEMENT" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_AWAKEN" level="17" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_COMMUNE_WITH_NATURE" level="17" spellcasting="Ranger" prepared="true" />
+        </rules>
+    </element>
+    <element name="Primal Beast" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_BEASTMASTER_PRIMAL_BEAST">
+        <description>
+<p>You have entered a mystical bond with a Primal Beast. It is Friendly to you, and uses the following rules:</p>
+            <p class="indent"><strong><em>Statistics.</em></strong> Choose a stat block that best reflects the nature of the Primal Beast: Beast of the Cave, Beast of the Land, Beast of the Sea, or Beast of the Sky. It uses your Proficiency Bonus (PB), Quarry Die, and Spell save DC for saving throws.</p>
+            <p class="indent"><strong><em>Combat.</em></strong> In combat, your Beast acts during your turn. As a bonus action, you can order it to take an action in its stat block, or another action. If you take the Attack action, you can forgo one attack to order your Beast to attack instead. The Beast can move and use its reaction on its own, but will only take the Dodge action unless you give it an order. If you are Incapacitated, the Beast acts on its own, and will defend you and itself to the best of its ability.</p>
+            <p class="indent"><strong><em>Primal Shift.</em></strong> During a long rest, you can perform a 1-hour ritual to change the Primal Beast's stat block to another Primal Beast.</p>
+            <p class="indent"><strong><em>Death.</em></strong> If your Beast is reduced to 0 hit points, it must make Death Saving Throws like a player character would. If it dies, you can perform a 1-hour ritual, which can be during a short or long rest, to restore it to life with 1 hit point. As part of this ritual, it can spend Hit Dice to regain additional hit points.</p>
+            <div class="reference">
+                <h5>BEAST OF THE CAVE</h5>
+                <p>Medium Beast, Neutral &#8212; AC 13 + PB (natural armor) &#8212; HP 5 + five times your Ranger level &#8212; Speed 30 ft., burrow 10 ft.</p>
+                <p>STR 16 (+3), DEX 14 (+2), CON 13 (+1), INT 8 (&#8722;1), WIS 12 (+1), CHA 11 (+0). Skills Stealth +4. Senses Darkvision 120 ft., Tremorsense 30 ft.</p>
+                <p><em>Hit Dice.</em> The Beast has a number of d8 Hit Dice equal to your level, and gains the normal benefits of rests. <em>Primal Bond.</em> When your PB increases, the Beast's bonus to skill and saving throw proficiencies increases as well.</p>
+                <p><em>Claw.</em> Melee Weapon Attack: 3 + PB to hit, reach 5 ft., one target. Hit: (Quarry Die + PB) slashing damage.</p>
+                <h5>BEAST OF THE LAND</h5>
+                <p>Medium Beast, Neutral &#8212; AC 13 + PB (natural armor) &#8212; HP 5 + five times your Ranger level &#8212; Speed 40 ft., climb 40 ft.</p>
+                <p>STR 16 (+3), DEX 14 (+2), CON 15 (+2), INT 8 (&#8722;1), WIS 12 (+1), CHA 11 (+0). Skills Perception +3, Stealth +4, Survival +3. Senses Darkvision 120 ft.</p>
+                <p><em>Charge.</em> If the Beast moves at least 20 ft. in a line then hits with its Maul, it deals bonus damage equal to its Quarry Die, and if the target is equal to the Beast's size or smaller, the target is also knocked Prone. <em>Hit Dice/Primal Bond</em> as above.</p>
+                <p><em>Maul.</em> Melee Weapon Attack: 3 + PB to hit, reach 5 ft., one target. Hit: (Quarry Die + PB) slashing damage.</p>
+                <h5>BEAST OF THE SEA</h5>
+                <p>Medium Beast, Neutral &#8212; AC 13 + PB (natural armor) &#8212; HP 5 + five times your Ranger level &#8212; Speed 10 ft., swim 40 ft.</p>
+                <p>STR 16 (+3), DEX 14 (+2), CON 15 (+2), INT 8 (&#8722;1), WIS 12 (+1), CHA 11 (+0). Skills Perception +3, Stealth +4. Senses Darkvision 60 ft.</p>
+                <p><em>Amphibious.</em> The Beast can breathe both air and water. <em>Wrap.</em> If the Beast hits with its Tentacle, it can Grapple the target (escape DC equals your Spell save DC), and can no longer attack with that Tentacle while grappling. Hit Dice/Primal Bond as above.</p>
+                <p><em>Tentacle.</em> Melee Weapon Attack: 3 + PB to hit, reach 5 ft., one target. Hit: (Quarry Die + PB) bludgeoning damage.</p>
+                <h5>BEAST OF THE SKY</h5>
+                <p>Small Beast, Neutral &#8212; AC 13 + PB (natural armor) &#8212; HP 4 + four times your Ranger level &#8212; Speed 10 ft., fly 60 ft.</p>
+                <p>STR 6 (&#8722;2), DEX 16 (+3), CON 13 (+1), INT 8 (&#8722;1), WIS 12 (+1), CHA 11 (+0). Skills Acrobatics +5, Perception +3. Senses Darkvision 60 ft.</p>
+                <p><em>Flyby.</em> The Beast does not provoke opportunity attacks when it flies out of a hostile creature's reach. Hit Dice (d6)/Primal Bond as above.</p>
+                <p><em>Shred.</em> Melee Weapon Attack: 3 + PB to hit, reach 5 ft., one target. Hit: (Quarry Die + PB) slashing damage.</p>
+            </div>
+        </description>
+        <sheet>
+            <description>In combat, your Beast acts during your turn. As a bonus action, you can order it to take an action from its stat block, or another action. If you take the Attack action, you can forgo one attack to order your Beast to attack instead. It can move and use its reaction on its own, but will only take the Dodge action unless ordered. If you are Incapacitated, the Beast acts on its own. If it dies, you can perform a 1-hour ritual during a rest to restore it to life with 1 hit point.</description>
+        </sheet>
+        <rules>
+            <select type="Companion" name="Primal Beast" supports="Primal Beast LL" />
+            <stat name="companion:ac" value="proficiency" />
+            <stat name="additional:hp:max" value="level:ranger" />
+            <stat name="additional:hp:max" value="level:ranger" />
+            <stat name="additional:hp:max" value="level:ranger" />
+            <stat name="additional:hp:max" value="level:ranger" />
+            <stat name="additional:hp:max" value="level:ranger" />
+            <stat name="companion:hp:max" value="additional:hp:max" />
+        </rules>
+    </element>
+    <element name="Wild Empathy" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_BEASTMASTER_WILD_EMPATHY">
+        <description>
+<p>Your Primal Beast marks you as a friend to all animals. You gain proficiency in Insight and learn the Wild Insight I Knack. It can't be replaced, but it doesn't count against your Knacks Known. If you already know Wild Insight I, you learn another Knack of your choice that you meet the prerequisites for.</p>
+        </description>
+        <sheet>
+            <description>You gain proficiency in Insight and learn the Wild Insight I Knack (it doesn't count against your Knacks Known).</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+            <grant type="Class Feature" id="ID_LLR_KNACK_WILD_INSIGHT_1" />
+        </rules>
+    </element>
+    <element name="Bestial Focus" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_BEASTMASTER_BESTIAL_FOCUS">
+        <description>
+<p>Ranger and Beast hunt in deadly tandem. Your Primal Beast gains all the benefits of your Ranger's Quarry, including any Knacks you know that enhance it. Your Primal Beast's natural weapon attacks also count as magical for overcoming Resistances and Immunities.</p>
+        </description>
+        <sheet>
+            <description>Your Primal Beast gains all the benefits of your Ranger's Quarry, including any Knacks you know that enhance it. Its natural weapon attacks count as magical for overcoming Resistances and Immunities.</description>
+        </sheet>
+    </element>
+    <element name="Exceptional Training" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_BEASTMASTER_EXCEPTIONAL_TRAINING">
+        <description>
+<p>You are able to draw out the full ferocity of your Primal Beast. Once per turn when you order your Primal Beast to use one of the attacks in its stat block, it can make two attacks, instead of one.</p>
+        </description>
+        <sheet>
+            <description>Once per turn when you order your Primal Beast to use one of the attacks in its stat block, it can make two attacks, instead of one.</description>
+        </sheet>
+    </element>
+    <element name="Primal Bond" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_BEASTMASTER_PRIMAL_BOND">
+        <description>
+<p>The mystical power which binds you and your Primal Beast together has reached its apex. When you cast a Ranger spell that targets only yourself, your Primal Beast also gains the benefits of that spell, as long as it is within 30 feet.</p>
+        </description>
+        <sheet>
+            <description>When you cast a Ranger spell that targets only yourself, your Primal Beast also gains the benefits of that spell, as long as it is within 30 feet.</description>
+        </sheet>
+    </element>
+    <element name="Deep Stalker" type="Archetype" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_ARCH_DEEP_STALKER">
+        <supports>Ranger Conclave LL</supports>
+        <description>
+<p>Deep beneath the earth, where the light of the sun is a dream, nameless things dwell in the deep shadow. The Rangers who stand against these unspeakable terrors of the darkness are known as Deep Stalkers. Though their skills were originally developed to guard the Underdark, Deep Stalkers can be found guarding anywhere darkness lies heavy on the land.</p>
+            <div element="ID_LLR_AF_DEEPSTALKER_MAGIC" />
+            <div element="ID_LLR_AF_DEEPSTALKER_UMBRAL_SIGHT" />
+            <div element="ID_LLR_AF_DEEPSTALKER_DREAD_AMBUSHER" />
+            <div element="ID_LLR_AF_DEEPSTALKER_CLOAK_OF_SHADOWS" />
+            <div element="ID_LLR_AF_DEEPSTALKER_IRON_MIND" />
+            <div element="ID_LLR_AF_DEEPSTALKER_PRECISE_STRIKES" />
+            <div element="ID_LLR_AF_DEEPSTALKER_DEADLY_COUNTER" />
+        </description>
+        <sheet display="false"><description>Rangers who stand against the unspeakable terrors that dwell in deep darkness.</description></sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LLR_AF_DEEPSTALKER_MAGIC" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DEEPSTALKER_UMBRAL_SIGHT" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DEEPSTALKER_DREAD_AMBUSHER" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DEEPSTALKER_CLOAK_OF_SHADOWS" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DEEPSTALKER_IRON_MIND" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DEEPSTALKER_PRECISE_STRIKES" level="11" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DEEPSTALKER_DEADLY_COUNTER" level="15" />
+        </rules>
+    </element>
+    <element name="Deep Stalker Spells" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DEEPSTALKER_MAGIC">
+        <description>
+<p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the table below. The spell counts as a Ranger spell for you, but it doesn't count against the number of Ranger spells you can prepare.</p><h5>CONCLAVE SPELLS</h5>
+            <table>
+                <thead><tr><td>Ranger Level</td><td>Spell</td></tr></thead>
+                <tr><td>3</td><td><em>cause fear, disguise self</em></td></tr>
+                <tr><td>5</td><td><em>darkness, invisibility</em></td></tr>
+                <tr><td>9</td><td><em>fear, nondetection</em></td></tr>
+                <tr><td>13</td><td><em>greater invisibility, phantasmal killer</em></td></tr>
+                <tr><td>17</td><td><em>mislead, seeming</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_XGTE_SPELL_CAUSE_FEAR" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DISGUISE_SELF" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DARKNESS" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_INVISIBILITY" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FEAR" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_NONDETECTION" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_GREATER_INVISIBILITY" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_PHANTASMAL_KILLER" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_MISLEAD" level="17" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SEEMING" level="17" spellcasting="Ranger" prepared="true" />
+        </rules>
+    </element>
+    <element name="Umbral Sight" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DEEPSTALKER_UMBRAL_SIGHT">
+        <description>
+<p>You have adapted to stalk your prey without light. You gain Darkvision out to a range of 60 feet. If you have Darkvision from another feature, its range increases by 60 feet.</p>
+        </description>
+        <sheet>
+            <description>You gain Darkvision out to a range of 60 feet. If you have Darkvision from another feature, its range increases by 60 feet.</description>
+        </sheet>
+        <rules>
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <stat name="vision:darkvision" value="60" />
+        </rules>
+    </element>
+    <element name="Dread Ambusher" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DEEPSTALKER_DREAD_AMBUSHER">
+        <description>
+<p>You mimic the surprise tactics of the nameless creatures that dwell in the darkness. So long as you are not Incapacitated or Surprised, you add your Wisdom modifier (a minimum of +1) to your initiative rolls.</p>
+            <p class="indent">Also, when you take the Attack action during your first turn in combat, you make one additional attack. If you hit with this additional attack, it deals bonus psychic damage equal to your Quarry Die.</p>
+        </description>
+        <sheet>
+            <description>You add {{wisdom:modifier}} (minimum of +1) to your initiative rolls. When you take the Attack action during your first turn in combat, you make one additional attack; if it hits, it deals bonus psychic damage equal to your Quarry Die.</description>
+        </sheet>
+    </element>
+    <element name="Cloak of Shadows" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DEEPSTALKER_CLOAK_OF_SHADOWS">
+        <description>
+<p>You have learned to conceal yourself even from the creatures native to the deep shadow. While you are in darkness, you are invisible to creatures that rely on Darkvision to see you.</p>
+        </description>
+        <sheet>
+            <description>While you are in darkness, you are invisible to creatures that rely on Darkvision to see you.</description>
+        </sheet>
+    </element>
+    <element name="Iron Mind" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DEEPSTALKER_IRON_MIND">
+        <description>
+<p>You have trained your mind to resist the mental assaults common in the depths you stalk. You gain proficiency in Wisdom saving throws. If you are already proficient, you gain proficiency in either Intelligence or Charisma saving throws.</p>
+        </description>
+        <rules>
+            <select type="Proficiency" name="Iron Mind" supports="ID_PROFICIENCY_SAVINGTHROW_WISDOM|ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE|ID_PROFICIENCY_SAVINGTHROW_CHARISMA" number="1" />
+        </rules>
+    </element>
+    <element name="Precise Strikes" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DEEPSTALKER_PRECISE_STRIKES">
+        <description>
+<p>In the unforgiving dark, every strike could be the difference between life and death. Once per turn when you miss with a weapon attack against your Quarry, you add your Quarry Die to your attack roll, possibly turning your miss into a hit.</p>
+            <p class="indent">Your Darkvision has also improved, allowing you to see in both magical and nonmagical dim light and darkness.</p>
+        </description>
+        <sheet>
+            <description usage="1/Turn">When you miss with a weapon attack against your Quarry, you add your Quarry Die to your attack roll, possibly turning your miss into a hit. You can also see in both magical and nonmagical dim light and darkness.</description>
+        </sheet>
+    </element>
+    <element name="Deadly Counter" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DEEPSTALKER_DEADLY_COUNTER">
+        <description>
+<p>You can manipulate the shadows to distract your foes. When you see your Quarry target you with an attack, you can use your reaction to cloak yourself in shadows, and impose disadvantage on its attack roll.</p>
+            <p class="indent">If its attack misses, you can make one weapon attack against your Quarry as part of the same reaction. If you are in dim light or darkness when you make this attack, you have advantage on your attack roll.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">When your Quarry targets you with an attack, you can use your reaction to cloak yourself in shadows and impose disadvantage on its attack roll. If its attack misses, you can make one weapon attack against your Quarry as part of the same reaction (with advantage if you're in dim light or darkness).</description>
+        </sheet>
+    </element>
+    <element name="Drake Guard" type="Archetype" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_ARCH_DRAKE_GUARD">
+        <supports>Ranger Conclave LL</supports>
+        <description>
+<p>Sometimes wandering Rangers enter into the service of great dragons and are granted a portion of their power. Undergoing an ancient ritual, they are bound to a Draconic Companion, a powerful scion of an elder dragon. Known as Drake Guards, these Rangers fight alongside their Companions as powerful draconic servants, and can eventually become dragon riders.</p>
+            <div element="ID_LLR_AF_DRAKEGUARD_MAGIC" />
+            <div element="ID_LLR_AF_DRAKEGUARD_DRACONIC_COMPANION" />
+            <div element="ID_LLR_AF_DRAKEGUARD_WYRMSOUL" />
+            <div element="ID_LLR_AF_DRAKEGUARD_GREATER_COMPANION" />
+            <div element="ID_LLR_AF_DRAKEGUARD_ELEMENTAL_BREATH" />
+            <div element="ID_LLR_AF_DRAKEGUARD_MYTHIC_COMPANION" />
+        </description>
+        <sheet display="false"><description>Rangers bound to a Draconic Companion through an ancient rite, who can eventually become dragon riders.</description></sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LLR_AF_DRAKEGUARD_MAGIC" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DRAKEGUARD_DRACONIC_COMPANION" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DRAKEGUARD_WYRMSOUL" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DRAKEGUARD_GREATER_COMPANION" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DRAKEGUARD_ELEMENTAL_BREATH" level="11" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_DRAKEGUARD_MYTHIC_COMPANION" level="15" />
+        </rules>
+    </element>
+    <element name="Drake Guard Spells" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DRAKEGUARD_MAGIC">
+        <description>
+<p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the table below. The spell counts as a Ranger spell for you, but it doesn't count against the number of Ranger spells you can prepare.</p><h5>CONCLAVE SPELLS</h5>
+            <table>
+                <thead><tr><td>Ranger Level</td><td>Spell</td></tr></thead>
+                <tr><td>3</td><td><em>absorb elements, command</em></td></tr>
+                <tr><td>5</td><td><em>dragon's breath, warding bond</em></td></tr>
+                <tr><td>9</td><td><em>elemental bane, fear</em></td></tr>
+                <tr><td>13</td><td><em>dominate creature, polymorph</em></td></tr>
+                <tr><td>17</td><td><em>awaken, conjure dragon</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_XGTE_SPELL_ABSORB_ELEMENTS" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_COMMAND" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_DRAGONS_BREATH" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_WARDING_BOND" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_ELEMENTAL_BANE" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FEAR" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DOMINATE_CREATURE" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_POLYMORPH" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_AWAKEN" level="17" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_CONJURE_DRAGON" level="17" spellcasting="Ranger" prepared="true" />
+        </rules>
+    </element>
+    <element name="Draconic Companion" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DRAKEGUARD_DRACONIC_COMPANION">
+        <description>
+<p>Your soul has been bound to a powerful Draconic Companion through an ancient draconic rite. It uses the following rules:</p>
+            <p class="indent"><strong><em>Draconic Essence.</em></strong> Choose either acid, cold, fire, lightning, or poison to be the Essence of your Companion. Once chosen, this cannot be changed short of an ancient dragon's magic. This Essence determines many of its features.</p>
+            <p class="indent"><strong><em>Statistics.</em></strong> Your Draconic Companion is Friendly to your allies and fervently loyal to you. It uses the Draconic Companion stat block. It uses your Proficiency Bonus (PB), Quarry Die, and Ranger Spell save DC for saving throws. Despite its size, your Draconic Companion is too proud to bear another creature as a rider.</p>
+            <p class="indent"><strong><em>Combat.</em></strong> In combat, the Companion acts during your turn. It can move and use its reaction independently, but will only take the Dodge action unless you give it an order. As a bonus action, you can order it to take an action from its stat block or a different action. When you take the Attack action, you can forgo one of your attacks to order your Companion to make a single attack instead. If you are Incapacitated, your Companion acts on its own and will defend you and itself to the best of its ability.</p>
+            <p class="indent"><strong><em>Death.</em></strong> If your Companion is reduced to 0 hit points, it makes Death Saving Throws like a player character would. Should your Draconic Companion die, you can perform a 1-hour ritual, which can be during a short or long rest, that restores it to life with 1 hit point. As part of this ritual, it can spend Hit Dice to regain additional hit points.</p>
+            <div class="reference">
+                <h5>DRACONIC COMPANION</h5>
+                <p>Small Dragon, Lawful &#8212; AC 14 + PB (natural armor) &#8212; HP 5 + five times your Ranger level &#8212; Speed 30 ft., fly 30 ft.</p>
+                <p>STR 16 (+3), DEX 12 (+1), CON 15 (+2), INT 8 (&#8722;1), WIS 10 (+0), CHA 14 (+2). Immunities Essence damage type. Skills Acrobatics +3, Intimidation +4. Senses Darkvision 60 ft. Languages Draconic, understands the languages of the Ranger bound to it, but cannot speak them.</p>
+                <p><em>Hit Dice.</em> The Dragon has a number of d8 Hit Dice equal to your level, and it gains the normal benefits of rests. <em>Soul Bond.</em> When your PB increases, the Dragon's bonus to skill and saving throw proficiencies increases as well.</p>
+                <p><em>Claw.</em> Melee Weapon Attack: 3 + PB to hit, reach 5 ft., one target. Hit: (Quarry Die + PB) slashing damage plus 1d4 Essence damage.</p>
+            </div>
+        </description>
+        <sheet>
+            <description>In combat, the Companion acts during your turn. As a bonus action, you can order it to take an action from its stat block or a different action. When you take the Attack action, you can forgo one of your attacks to order your Companion to make a single attack instead. If your Companion dies, you can perform a 1-hour ritual during a rest to restore it to life with 1 hit point.</description>
+        </sheet>
+        <rules>
+            <select type="Companion" name="Draconic Companion" supports="Draconic Companion LL" />
+            <stat name="companion:ac" value="proficiency" />
+            <stat name="additional:hp:max" value="level:ranger" />
+            <stat name="additional:hp:max" value="level:ranger" />
+            <stat name="additional:hp:max" value="level:ranger" />
+            <stat name="additional:hp:max" value="level:ranger" />
+            <stat name="additional:hp:max" value="level:ranger" />
+            <stat name="companion:hp:max" value="additional:hp:max" />
+        </rules>
+    </element>
+    <element name="Wyrmsoul" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DRAKEGUARD_WYRMSOUL">
+        <description>
+<p>The bond you share with your Companion creates a deeper connection to dragonkind, granting you understanding of their language and empowering your presence. You learn to speak, read, and write Draconic.</p>
+            <p class="indent">Also, you can cause your Ranger's Quarry damage, or any damage you deal with a Ranger spell, to be your Companion's Essence damage type in place of its normal damage type.</p>
+        </description>
+        <sheet>
+            <description>You learn to speak, read, and write Draconic. You can cause your Ranger's Quarry damage, or any damage you deal with a Ranger spell, to be your Companion's Essence damage type in place of its normal damage type.</description>
+        </sheet>
+        <rules>
+            <grant type="Language" id="ID_LANGUAGE_DRACONIC" />
+        </rules>
+    </element>
+    <element name="Greater Companion" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DRAKEGUARD_GREATER_COMPANION">
+        <description>
+<p>Your bond infuses your Companion with greater power. Your Companion becomes Medium in size, and will bear you (and no one else) as a rider if you are Medium or smaller. However, if you are riding it, its flying speed is halved.</p>
+            <p class="indent">Your Companion's natural weapon attacks also count as magical for overcoming Resistances and Immunities.</p>
+        </description>
+        <sheet>
+            <description>Your Companion becomes Medium in size, and will bear you as a rider if you are Medium or smaller (though its flying speed is halved while carrying you). Its natural weapon attacks count as magical for overcoming Resistances and Immunities.</description>
+        </sheet>
+    </element>
+    <element name="Elemental Breath" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DRAKEGUARD_ELEMENTAL_BREATH">
+        <description>
+<p>As an action, you or your Companion can exhale a 30-foot cone of Essence energy, forcing creatures in the area to make a Dexterity saving throw. Creatures take 6d6 Essence damage on a failure, and half as much on a success.</p>
+            <p class="indent">You and your Companion can use this feature a combined number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest. When you have no uses left, you can expend a spell slot of 3rd level or higher to use your Elemental Breath again.</p>
+        </description>
+        <sheet>
+            <description action="Action" usage="{{wisdom:modifier}}/Long Rest">You or your Companion can exhale a 30-foot cone of Essence energy, forcing creatures in the area to make a Dexterity saving throw against your spell save DC. Creatures take 6d6 Essence damage on a failure, and half as much on a success.</description>
+        </sheet>
+    </element>
+    <element name="Mythic Companion" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_DRAKEGUARD_MYTHIC_COMPANION">
+        <description>
+<p>Your bond with your Companion has unlocked its true potential. Your Companion now uses the Mythic Companion stat block. Also, once per turn when you command your Companion to attack, it can make two attacks instead of one.</p>
+            <div class="reference">
+                <h5>MYTHIC COMPANION</h5>
+                <p>Large Dragon, Lawful &#8212; AC 14 + PB (natural armor) &#8212; HP 5 + five times your Ranger level &#8212; Speed 40 ft., climb 40 ft., fly 60 ft.</p>
+                <p>STR 20 (+5), DEX 12 (+1), CON 18 (+4), INT 14 (+2), WIS 10 (+0), CHA 18 (+4). Immunities Essence damage type. Skills Acrobatics +6, Intimidation +9. Senses Blindsight 30 ft., Darkvision 60 ft. Languages Draconic, understands the languages of the Ranger bound to it, but cannot speak them.</p>
+                <p><em>Change Size.</em> Your Companion changes size, becoming Small, Medium, or Large until it uses this feature again.</p>
+                <p><em>Claw.</em> Melee Weapon Attack: 5 + PB to hit, reach 5 ft., one target. Hit: (Quarry Die + PB) slashing damage plus 1d4 Essence damage.</p>
+            </div>
+        </description>
+        <sheet>
+            <description>Your Companion now uses the Mythic Companion stat block. Once per turn when you command it to attack, it can make two attacks instead of one.</description>
+        </sheet>
+    </element>
+    <element name="Fey Wanderer" type="Archetype" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_ARCH_FEY_WANDERER">
+        <supports>Ranger Conclave LL</supports>
+        <description>
+<p>You have learned to lace your Ranger skills with faerie magic. Whether you were a warden of a Fey crossroads, the favored servant of a faerie lord, or won your faerie magic in a wager, you wield the whimsical and terrifying power of the faerie.</p><div element="ID_LLR_AF_FEYWANDERER_MAGIC" /><div element="ID_LLR_AF_FEYWANDERER_BEGUILING_STRIKES" /><div element="ID_LLR_AF_FEYWANDERER_OTHERWORLDLY_MYSTIQUE" /><div element="ID_LLR_AF_FEYWANDERER_WHIMSICAL_WARD" /><div element="ID_LLR_AF_FEYWANDERER_FAERIE_GUARDIAN" /><div element="ID_LLR_AF_FEYWANDERER_MIRTHFUL_STEP" />
+        </description>
+        <sheet display="false"><description>Rangers who wield the whimsical and terrifying power of the faerie.</description></sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LLR_AF_FEYWANDERER_MAGIC" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_FEYWANDERER_BEGUILING_STRIKES" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_FEYWANDERER_OTHERWORLDLY_MYSTIQUE" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_FEYWANDERER_WHIMSICAL_WARD" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_FEYWANDERER_FAERIE_GUARDIAN" level="11" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_FEYWANDERER_MIRTHFUL_STEP" level="15" />
+        </rules>
+    </element>
+    <element name="Fey Wanderer Spells" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_FEYWANDERER_MAGIC">
+        <description>
+<p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the table below. The spell counts as a Ranger spell for you, but it doesn't count against the number of Ranger spells you can prepare.</p><h5>CONCLAVE SPELLS</h5>
+            <table>
+                <thead><tr><td>Ranger Level</td><td>Spell</td></tr></thead>
+                <tr><td>3</td><td><em>cause fear, charm person</em></td></tr>
+                <tr><td>5</td><td><em>misty step, suggestion</em></td></tr>
+                <tr><td>9</td><td><em>conjure fey, enemies abound</em></td></tr>
+                <tr><td>13</td><td><em>charm monster, dimension door</em></td></tr>
+                <tr><td>17</td><td><em>geas, mislead</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_XGTE_SPELL_CAUSE_FEAR" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_MISTY_STEP" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SUGGESTION" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_CONJURE_FEY" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_ENEMIES_ABOUND" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_TCE_SPELL_CHARM_MONSTER" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DIMENSION_DOOR" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_GEAS" level="17" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_MISLEAD" level="17" spellcasting="Ranger" prepared="true" />
+        </rules>
+    </element>
+    <element name="Beguiling Strikes" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_FEYWANDERER_BEGUILING_STRIKES">
+        <description>
+<p>You weave wild and disorienting faerie magic into your strikes. Your Ranger's Quarry bonus damage is psychic, and when you deal this psychic damage to a Quarry that is within 15 feet of you, it has disadvantage on all attack rolls against creatures other than you until the start of your next turn.</p>
+        </description>
+        <sheet>
+            <description>Your Ranger's Quarry bonus damage is psychic. When you deal this psychic damage to a Quarry within 15 feet of you, it has disadvantage on all attack rolls against creatures other than you until the start of your next turn.</description>
+        </sheet>
+    </element>
+    <element name="Otherworldly Mystique" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_FEYWANDERER_OTHERWORLDLY_MYSTIQUE">
+        <description>
+<p>You are infused with the magical charm of the faerie. You gain proficiency in Deception, Performance, or Persuasion. Also, whenever you would make a Charisma check, you can use Wisdom instead.</p>
+        </description>
+        <rules>
+            <select type="Proficiency" name="Otherworldly Mystique" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_PERFORMANCE|ID_PROFICIENCY_SKILL_PERSUASION" number="1" />
+        </rules>
+    </element>
+    <element name="Whimsical Ward" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_FEYWANDERER_WHIMSICAL_WARD">
+        <description>
+<p>Your familiarity with faerie power makes you resistant to it. You have advantage on saving throws to resist and end the Charmed and Frightened conditions.</p>
+            <p class="indent">Also, if a creature succeeds on its saving throw against one of your Fey Wanderer spells, you can cause another creature of your choice within range to become the target of that spell instead. You can choose a new target this way a number of times equal to your Wisdom modifier (a minimum of 1). You regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description usage="{{wisdom:modifier}}/Long Rest">You have advantage on saving throws to resist and end the Charmed and Frightened conditions. If a creature succeeds on its saving throw against one of your Fey Wanderer spells, you can cause another creature within range to become the target of that spell instead.</description>
+        </sheet>
+    </element>
+    <element name="Faerie Guardian" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_FEYWANDERER_FAERIE_GUARDIAN">
+        <description>
+<p>You can call support from the otherworldly faerie courts. You can cast conjure fey without its material component.</p>
+            <p class="indent">Moreover, when you cast conjure fey, you can cast it so that it doesn't require concentration, but its duration is reduced to 1 minute. If you cast it again, any previous Fey are dispelled.</p>
+        </description>
+        <sheet>
+            <description>You can cast conjure fey without its material component. You can also cast it so that it doesn't require concentration, though its duration is reduced to 1 minute.</description>
+        </sheet>
+    </element>
+    <element name="Mirthful Step" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_FEYWANDERER_MIRTHFUL_STEP">
+        <description>
+<p>You can use your magic to slip through the faerie realm. You can cast the misty step spell without expending a spell slot a number of times equal to your Wisdom modifier (a minimum of once). You regain all uses when you finish a long rest.</p>
+            <p class="indent">Moreover, any time you cast misty step, you can touch one willing creature within 5 feet and teleport it along with you. It reappears in an unoccupied space within 5 feet of the space that you appear in.</p>
+        </description>
+        <sheet>
+            <description usage="{{wisdom:modifier}}/Long Rest">You can cast misty step without expending a spell slot. Any time you cast misty step, you can touch one willing creature within 5 feet and teleport it along with you.</description>
+        </sheet>
+    </element>
+    <element name="Hunter" type="Archetype" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_ARCH_HUNTER">
+        <supports>Ranger Conclave LL</supports>
+        <description>
+<p>Hunters hold the line between civilization and the wilderness using their deadly tracking and hunting skills. In the shadows of every countryside town lurks a Hunter, silently taking care of any monster that threatens the peace. Hordes of orcs, trolls, great beasts of the wild, it matters not. A Hunter will always overcome their Quarry.</p><div element="ID_LLR_AF_HUNTER_MAGIC" /><div element="ID_LLR_AF_HUNTER_AMBUSCADE" /><div element="ID_LLR_AF_HUNTER_SILENT_STEPS" /><div element="ID_LLR_AF_HUNTER_CUNNING_PARRY" /><div element="ID_LLR_AF_HUNTER_RELENTLESS_HUNTER" /><div element="ID_LLR_AF_HUNTER_HORDE_BREAKER" /><div element="ID_LLR_AF_HUNTER_RUTHLESS_FOCUS" />
+        </description>
+        <sheet display="false"><description>Rangers who lean into their role as a deadly predator, holding the line between civilization and the wild.</description></sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LLR_AF_HUNTER_MAGIC" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_HUNTER_AMBUSCADE" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_HUNTER_SILENT_STEPS" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_HUNTER_CUNNING_PARRY" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_HUNTER_RELENTLESS_HUNTER" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_HUNTER_HORDE_BREAKER" level="11" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_HUNTER_RUTHLESS_FOCUS" level="15" />
+        </rules>
+    </element>
+    <element name="Hunter Spells" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_HUNTER_MAGIC">
+        <description>
+<p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the table below. The spell counts as a Ranger spell for you, but it doesn't count against the number of Ranger spells you can prepare.</p><h5>CONCLAVE SPELLS</h5>
+            <table>
+                <thead><tr><td>Ranger Level</td><td>Spell</td></tr></thead>
+                <tr><td>3</td><td><em>create snare, expeditious retreat</em></td></tr>
+                <tr><td>5</td><td><em>locate creature, pass without trace</em></td></tr>
+                <tr><td>9</td><td><em>conjure volley, nondetection</em></td></tr>
+                <tr><td>13</td><td><em>faithful hound, freedom of movement</em></td></tr>
+                <tr><td>17</td><td><em>swift quiver, tree stride</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_XGTE_SPELL_CREATE_SNARE" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_EXPEDITIOUS_RETREAT" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_LOCATE_CREATURE" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_PASS_WITHOUT_TRACE" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_CONJURE_VOLLEY" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_NONDETECTION" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FAITHFUL_HOUND" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FREEDOM_OF_MOVEMENT" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_SWIFT_QUIVER" level="17" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_TREE_STRIDE" level="17" spellcasting="Ranger" prepared="true" />
+        </rules>
+    </element>
+    <element name="Ambuscade" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_HUNTER_AMBUSCADE">
+        <description>
+<p>You are always prepared to strike first, often getting the jump on your prey. When you roll initiative, so long as you are not Surprised, you can use your reaction to take the Hide action, the Attack action, or mark a creature as your Quarry.</p>
+            <p class="indent">If you are Surprised, you cannot take this special reaction, but you can not normally on your first turn in combat.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">When you roll initiative, so long as you are not Surprised, you can use your reaction to take the Hide action, the Attack action, or mark a creature as your Quarry.</description>
+        </sheet>
+    </element>
+    <element name="Silent Steps" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_HUNTER_SILENT_STEPS">
+        <description>
+<p>You stalk your prey unseen until it is too late. You gain proficiency in Stealth and you learn the Stalker I Knack. It cannot be replaced, but does not count against your Knacks Known.</p>
+            <p class="indent">If you already know Stalker I, you can learn a different Knack of your choice.</p>
+        </description>
+        <sheet>
+            <description>You gain proficiency in Stealth and learn the Stalker I Knack (it doesn't count against your Knacks Known).</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+            <grant type="Class Feature" id="ID_LLR_KNACK_STALKER_1" />
+        </rules>
+    </element>
+    <element name="Cunning Parry" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_HUNTER_CUNNING_PARRY">
+        <description>
+<p>Your unyielding focus allows you to parry and counter your foes. As a reaction when you see your Quarry make an attack against you, you can add your Wisdom modifier (minimum of +1) to your Armor Class against that attack.</p>
+            <p class="indent">If this causes the attack to miss, you can make one weapon attack against your Quarry as part of that same reaction.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">When you see your Quarry make an attack against you, you can add {{wisdom:modifier}} (minimum of +1) to your Armor Class against that attack. If this causes the attack to miss, you can make one weapon attack against your Quarry as part of that same reaction.</description>
+        </sheet>
+    </element>
+    <element name="Relentless Hunter" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_HUNTER_RELENTLESS_HUNTER">
+        <description>
+<p>You are relentless, stalking foes until they are all eradicated. When your Quarry dies, you can transfer the mark to another creature, marking it as your Quarry; no action required.</p>
+        </description>
+        <sheet>
+            <description>When your Quarry dies, you can transfer the mark to another creature, marking it as your Quarry; no action required.</description>
+        </sheet>
+    </element>
+    <element name="Horde Breaker" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_HUNTER_HORDE_BREAKER">
+        <description>
+<p>You are able to cut down your chosen prey like blades of grass. You gain the features listed below, each of which can be used as an action on your turn. You must be wielding the correct weapon to use the corresponding feature.</p>
+            <p class="indent"><strong><em>Volley.</em></strong> Choose a point you can see in the normal range of your ranged weapon. You fire a volley of ammunition, forcing creatures of your choice within 10 feet of that point to make a Dexterity saving throw. Creatures take damage as if they had been hit by an attack from your ranged weapon on a failure, and half as much damage on a successful save.</p>
+            <p class="indent"><strong><em>Whirlwind.</em></strong> You strike at the enemies around you, forcing creatures of your choice within range of your melee weapon to make a Dexterity saving throw. Creatures take damage as if they had been hit by your melee weapon on a failure, and half as much damage on a success.</p>
+        </description>
+        <sheet>
+            <description action="Action">Volley: choose a point in range of your ranged weapon; creatures of your choice within 10 feet make a Dexterity save or take damage as if hit by that weapon (half on a success). Whirlwind: creatures of your choice within range of your melee weapon make a Dexterity save or take damage as if hit by that weapon (half on a success).</description>
+        </sheet>
+    </element>
+    <element name="Ruthless Focus" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_HUNTER_RUTHLESS_FOCUS">
+        <description>
+<p>Your skills as a hunter rival those of legends and myths. When you deal damage to your Quarry with an attack or Horde Breaker, you can add your Wisdom modifier (a minimum of +1) to the damage.</p>
+        </description>
+        <sheet>
+            <description>When you deal damage to your Quarry with an attack or Horde Breaker, you can add {{wisdom:modifier}} (minimum of +1) to the damage.</description>
+        </sheet>
+    </element>
+    <element name="Monster Slayer" type="Archetype" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_ARCH_MONSTER_SLAYER">
+        <supports>Ranger Conclave LL</supports>
+        <description>
+<p>Some Rangers are driven from civilized life by a deep hatred for monsters. Often victims of these terrible monsters in their youth, those that take up the mantle of Monster Slayer travel the world hunting for vile supernatural creatures that prey on innocent mortals and ruthlessly annihilate them. They track down vampires, evil faeries, restless spirits, werewolves, and other vile creatures, and destroy them without hesitation.</p><div element="ID_LLR_AF_MONSTERSLAYER_MAGIC" /><div element="ID_LLR_AF_MONSTERSLAYER_KNOWLEDGE_OF_THE_HUNT" /><div element="ID_LLR_AF_MONSTERSLAYER_HATED_FOE" /><div element="ID_LLR_AF_MONSTERSLAYER_IRON_FOCUS" /><div element="ID_LLR_AF_MONSTERSLAYER_NEMESIS" /><div element="ID_LLR_AF_MONSTERSLAYER_RUTHLESS_COUNTER" />
+        </description>
+        <sheet display="false"><description>Rangers driven to travel the world hunting vile supernatural creatures, and destroy them without hesitation.</description></sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LLR_AF_MONSTERSLAYER_MAGIC" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_MONSTERSLAYER_KNOWLEDGE_OF_THE_HUNT" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_MONSTERSLAYER_HATED_FOE" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_MONSTERSLAYER_IRON_FOCUS" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_MONSTERSLAYER_NEMESIS" level="11" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_MONSTERSLAYER_RUTHLESS_COUNTER" level="15" />
+        </rules>
+    </element>
+    <element name="Monster Slayer Spells" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_MONSTERSLAYER_MAGIC">
+        <description>
+<p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the table below. The spell counts as a Ranger spell for you, but it doesn't count against the number of Ranger spells you can prepare.</p><h5>CONCLAVE SPELLS</h5>
+            <table>
+                <thead><tr><td>Ranger Level</td><td>Spell</td></tr></thead>
+                <tr><td>3</td><td><em>bane, protection from evil &amp; good</em></td></tr>
+                <tr><td>5</td><td><em>moonbeam, see invisibility</em></td></tr>
+                <tr><td>9</td><td><em>magic circle, protection from energy</em></td></tr>
+                <tr><td>13</td><td><em>banishment, faithful hound</em></td></tr>
+                <tr><td>17</td><td><em>dispel evil &amp; good, hold monster</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_BANE" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_EVIL_AND_GOOD" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_MOONBEAM" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SEE_INVISIBILITY" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_MAGIC_CIRCLE" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_ENERGY" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_BANISHMENT" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FAITHFUL_HOUND" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DISPEL_EVIL_AND_GOOD" level="17" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_HOLD_MONSTER" level="17" spellcasting="Ranger" prepared="true" />
+        </rules>
+    </element>
+    <element name="Knowledge of the Hunt" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_MONSTERSLAYER_KNOWLEDGE_OF_THE_HUNT">
+        <description>
+<p>You have dedicated yourself to the destruction of creatures of darkness, and study their weaknesses. You gain proficiency in your choice of Arcana, History, Nature, or Religion.</p>
+            <p class="indent">As a bonus action, you can analyze a creature you can see within 30 feet, making an ability check using the skill below corresponding to its creature type (DC equals 8 + its CR). If the target is your Quarry, add your Quarry Die to your roll:</p>
+            <table><thead><tr><td>Skill</td><td>Creature Types</td></tr></thead>
+            <tr><td>Arcana</td><td>Aberrations, Dragons, Monstrosities</td></tr>
+            <tr><td>History</td><td>Giants, Humanoids</td></tr>
+            <tr><td>Nature</td><td>Beasts, Elementals, Oozes, Plants</td></tr>
+            <tr><td>Religion</td><td>Celestials, Fey, Fiends, Undead</td></tr></table>
+            <p class="indent">On a success, you learn of all Condition and damage Immunities, Resistances, and Vulnerabilities it has. Alternately, you can choose to learn its highest ability score, lowest ability score, Armor Class, a Trait in its stat block, or another weakness it may have as determined by the DM.</p>
+            <p class="indent">If you fail your ability check, you can't use this feature on that creature again until you hit it with an attack.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">You can analyze a creature you can see within 30 feet, making an ability check (Arcana for aberrations/dragons/monstrosities, History for giants/humanoids, Nature for beasts/elementals/oozes/plants, Religion for celestials/fey/fiends/undead; DC equals 8 + its CR; add your Quarry Die if it's your Quarry). On a success, you learn its Condition/damage Immunities, Resistances, and Vulnerabilities, or another weakness.</description>
+        </sheet>
+        <rules>
+            <select type="Proficiency" name="Knowledge of the Hunt" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_RELIGION" number="1" />
+        </rules>
+    </element>
+    <element name="Hated Foe" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_MONSTERSLAYER_HATED_FOE">
+        <description>
+<p>Your skills have been honed against a particular hated foe. You gain the Favored Foe Knack.</p>
+            <p class="indent">Once in between each short or long rest, you can mark one of your Favored Foes as your Quarry without spending a use of the feature or a spell slot.</p>
+        </description>
+        <sheet>
+            <description usage="1/Rest">You gain the Favored Foe Knack. Once between each short or long rest, you can mark one of your Favored Foes as your Quarry without spending a use of the feature or a spell slot.</description>
+        </sheet>
+        <rules>
+            <grant type="Class Feature" id="ID_LLR_KNACK_FAVORED_FOE" />
+        </rules>
+    </element>
+    <element name="Iron Focus" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_MONSTERSLAYER_IRON_FOCUS">
+        <description>
+<p>You have sharpened your mind to withstand the supernatural assaults of your foes. When your Quarry forces you to make an ability check or saving throw, you gain a bonus to your roll equal to your Quarry Die.</p>
+        </description>
+        <sheet>
+            <description>When your Quarry forces you to make an ability check or saving throw, you gain a bonus to your roll equal to your Quarry Die.</description>
+        </sheet>
+    </element>
+    <element name="Monster's Nemesis" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_MONSTERSLAYER_NEMESIS">
+        <description>
+<p>Your hatred for evil empowers your weapons. Your weapon attacks against your Quarry ignore its damage Resistances, and treat its damage Immunities as Resistance.</p>
+            <p class="indent">Moreover, when your Quarry misses you with an attack, or you succeed on a saving throw it forced you to make, you can use your reaction to make a single weapon attack against it.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">Your weapon attacks against your Quarry ignore its damage Resistances, and treat its damage Immunities as Resistance. When your Quarry misses you with an attack, or you succeed on a saving throw it forced you to make, you can use your reaction to make a single weapon attack against it.</description>
+        </sheet>
+    </element>
+    <element name="Ruthless Counter" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_MONSTERSLAYER_RUTHLESS_COUNTER">
+        <description>
+<p>You do everything in your power to prevent the monsters you hunt from harming the innocent. When you see your Quarry attempt to cast a spell, teleport, or use another supernatural or magical ability, you can make a single weapon attack against it as a reaction. On a hit, your Quarry must succeed on a Wisdom saving throw and fails to take that effect.</p>
+            <p class="indent">When you use this feature and your attack hits, you can instantly end the effects of Ranger's Quarry and cause the Quarry to automatically fail this saving throw. Should this cause an ability to fail, that use of the ability is still expended by your Quarry.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">When you see your Quarry attempt to cast a spell, teleport, or use another supernatural or magical ability, you can make a single weapon attack against it. On a hit, it must succeed on a Wisdom saving throw or the effect is thwarted and fails to take effect.</description>
+        </sheet>
+    </element>
+    <element name="Planar Warden" type="Archetype" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_ARCH_PLANAR_WARDEN">
+        <supports>Ranger Conclave LL</supports>
+        <description>
+<p>Planar Wardens preserve the balance of the multiverse by defending their native plane of existence from otherworldly incursions. They stand guard over planar portals, and use their knowledge to channel planar power. Threats to their home plane are met with destruction.</p><div element="ID_LLR_AF_PLANARWARDEN_MAGIC" /><div element="ID_LLR_AF_PLANARWARDEN_EXTRAPLANAR_AWARENESS" /><div element="ID_LLR_AF_PLANARWARDEN_PLANAR_WARRIOR" /><div element="ID_LLR_AF_PLANARWARDEN_ETHEREAL_STEP" /><div element="ID_LLR_AF_PLANARWARDEN_ELITE_WARDEN" /><div element="ID_LLR_AF_PLANARWARDEN_EXTRAPLANAR_ADEPT" /><div element="ID_LLR_AF_PLANARWARDEN_ETHEREAL_DEFENSE" />
+        </description>
+        <sheet display="false"><description>Rangers who preserve the balance of the multiverse, defending their home plane from otherworldly incursions.</description></sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LLR_AF_PLANARWARDEN_MAGIC" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_PLANARWARDEN_EXTRAPLANAR_AWARENESS" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_PLANARWARDEN_PLANAR_WARRIOR" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_PLANARWARDEN_ETHEREAL_STEP" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_PLANARWARDEN_ELITE_WARDEN" level="11" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_PLANARWARDEN_EXTRAPLANAR_ADEPT" level="11" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_PLANARWARDEN_ETHEREAL_DEFENSE" level="15" />
+        </rules>
+    </element>
+    <element name="Planar Warden Spells" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_PLANARWARDEN_MAGIC">
+        <description>
+<p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the table below. The spell counts as a Ranger spell for you, but it doesn't count against the number of Ranger spells you can prepare.</p><h5>CONCLAVE SPELLS</h5>
+            <table>
+                <thead><tr><td>Ranger Level</td><td>Spell</td></tr></thead>
+                <tr><td>3</td><td><em>alarm, protection from evil &amp; good</em></td></tr>
+                <tr><td>5</td><td><em>misty step, rope trick</em></td></tr>
+                <tr><td>9</td><td><em>haste, magic circle</em></td></tr>
+                <tr><td>13</td><td><em>banishment, dimension door</em></td></tr>
+                <tr><td>17</td><td><em>banishing smite, teleportation circle</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_ALARM" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_EVIL_AND_GOOD" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_MISTY_STEP" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_ROPE_TRICK" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_HASTE" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_MAGIC_CIRCLE" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_BANISHMENT" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DIMENSION_DOOR" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_XGTE_SPELL_BANISHING_SMITE" level="17" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_TELEPORTATION_CIRCLE" level="17" spellcasting="Ranger" prepared="true" />
+        </rules>
+    </element>
+    <element name="Extraplanar Awareness" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_PLANARWARDEN_EXTRAPLANAR_AWARENESS">
+        <description>
+<p>You have trained to sense otherworldly presences which may threaten your home. As an action, you open your senses, and learn the distance and direction to the closest creature not native to the current plane, or the nearest planar portal within 1 mile of your location. As part of this action, you can exclude any creature or portal you are aware of. If a creature or portal is shielded from Divination magic, you do not detect it.</p>
+            <p class="indent">If you detect something, you can mark it as your Quarry without expending a use, and for the duration, you know the direction and distance to it, so long as it remains on the same plane of existence as you.</p>
+            <p class="indent">You can use this special sense once per short or long rest at no cost, after that, you must expend a spell slot to use it again.</p>
+        </description>
+        <sheet>
+            <description action="Action" usage="1/Rest">You open your senses and learn the distance and direction to the closest creature not native to the current plane, or the nearest planar portal within 1 mile. If you detect something, you can mark it as your Quarry without expending a use of Ranger's Quarry.</description>
+        </sheet>
+    </element>
+    <element name="Planar Warrior" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_PLANARWARDEN_PLANAR_WARRIOR">
+        <description>
+<p>You can augment your strikes with power drawn from the space between the planes. Your Ranger's Quarry bonus damage is force.</p>
+            <p class="indent">Moreover, if your Quarry is a creature that is not native to your current plane of existence, the bonus damage from Ranger's Quarry is doubled to two Quarry Dice.</p>
+        </description>
+        <sheet>
+            <description>Your Ranger's Quarry bonus damage is force. If your Quarry is a creature not native to your current plane of existence, this bonus damage is doubled to two Quarry Dice.</description>
+        </sheet>
+    </element>
+    <element name="Ethereal Step" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_PLANARWARDEN_ETHEREAL_STEP">
+        <description>
+<p>You can briefly move between planes to disorient your foes. When you take the Attack action, you can teleport up to 10 feet before each attack to an unoccupied space you can see.</p>
+            <p class="indent">Any distance you teleport with this feature counts against your total movement for your turn.</p>
+        </description>
+        <sheet>
+            <description>When you take the Attack action, you can teleport up to 10 feet before each attack to an unoccupied space you can see. This distance counts against your total movement for the turn.</description>
+        </sheet>
+    </element>
+    <element name="Elite Warden" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_PLANARWARDEN_ELITE_WARDEN">
+        <description>
+<p>You are an elite channeler of planar magic. Whenever you use Ethereal Step before a weapon attack, you can choose for all damage from that attack to become force damage.</p>
+            <p class="indent">Moreover, if you use Ethereal Step and attack at least two different targets, you can make one additional attack as part of that same Attack action. However, this bonus attack must be against a third target.</p>
+        </description>
+        <sheet>
+            <description>Whenever you use Ethereal Step before a weapon attack, you can choose for all damage from that attack to become force damage. If you use Ethereal Step and attack at least two different targets, you can make one additional attack against a third target as part of that same Attack action.</description>
+        </sheet>
+    </element>
+    <element name="Extraplanar Adept" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_PLANARWARDEN_EXTRAPLANAR_ADEPT">
+        <description>
+<p>Your ability to sense otherworldly incursions is second nature to you. You can use Extraplanar Awareness as a special ritual which takes 10 minutes to complete, and can be done as part of a short or long rest.</p>
+        </description>
+        <sheet>
+            <description>You can use Extraplanar Awareness as a special ritual which takes 10 minutes to complete, and can be done as part of a short or long rest.</description>
+        </sheet>
+    </element>
+    <element name="Ethereal Defense" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_PLANARWARDEN_ETHEREAL_DEFENSE">
+        <description>
+<p>You can partially phase into the space in between planes to resist hostile strikes. When you take damage from a source you can see, you can use your reaction to gain Resistance to that instance of damage.</p>
+            <p class="indent">When you use this reaction you can expend a spell slot to instantly teleport a number of feet equal to 10 times the level of the spell slot spent, appearing in an unoccupied space you can see within that range.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">When you take damage from a source you can see, you can use your reaction to gain Resistance to that instance of damage. You can expend a spell slot to instantly teleport a number of feet equal to 10 times the level of the slot spent.</description>
+        </sheet>
+    </element>
+    <element name="Spellbreaker" type="Archetype" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_ARCH_SPELLBREAKER">
+        <supports>Ranger Conclave LL</supports>
+        <description>
+<p>Spellbreakers are a small but dedicated Conclave of Rangers that specialize in hunting mages who use their arcane power for evil. While most pursue the life of a Spellbreaker for noble reasons, there are some who seek to destroy anyone with the potential to use magic. Most Spellbreakers work in secrecy, only striking when success is a certainty. If a wrong move could end in disintegration, there is no room for error.</p><div element="ID_LLR_AF_SPELLBREAKER_MAGIC" /><div element="ID_LLR_AF_SPELLBREAKER_MAGE_BREAKER" /><div element="ID_LLR_AF_SPELLBREAKER_SPELLSIGHT" /><div element="ID_LLR_AF_SPELLBREAKER_ARCANE_DEFENSE" /><div element="ID_LLR_AF_SPELLBREAKER_SPELLBANE" /><div element="ID_LLR_AF_SPELLBREAKER_MANTLE_OF_THE_MASTER" /><div element="ID_LLR_AF_SPELLBREAKER_REFLECT_SPELL" />
+        </description>
+        <sheet display="false"><description>Rangers who specialize in hunting mages who use their arcane power for evil.</description></sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LLR_AF_SPELLBREAKER_MAGIC" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SPELLBREAKER_MAGE_BREAKER" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SPELLBREAKER_SPELLSIGHT" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SPELLBREAKER_ARCANE_DEFENSE" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SPELLBREAKER_SPELLBANE" level="11" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SPELLBREAKER_MANTLE_OF_THE_MASTER" level="15" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SPELLBREAKER_REFLECT_SPELL" level="15" />
+        </rules>
+    </element>
+    <element name="Spellbreaker Spells" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SPELLBREAKER_MAGIC">
+        <description>
+<p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the table below. The spell counts as a Ranger spell for you, but it doesn't count against the number of Ranger spells you can prepare.</p><h5>CONCLAVE SPELLS</h5>
+            <table>
+                <thead><tr><td>Ranger Level</td><td>Spell</td></tr></thead>
+                <tr><td>3</td><td><em>absorb elements, detect magic</em></td></tr>
+                <tr><td>5</td><td><em>blindness/deafness, silence</em></td></tr>
+                <tr><td>9</td><td><em>counterspell, dispel magic</em></td></tr>
+                <tr><td>13</td><td><em>arcane eye, resilient sphere</em></td></tr>
+                <tr><td>17</td><td><em>dispel evil &amp; good, wall of force</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_XGTE_SPELL_ABSORB_ELEMENTS" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DETECT_MAGIC" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_BLINDNESS_DEAFNESS" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SILENCE" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_COUNTERSPELL" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DISPEL_MAGIC" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_ARCANE_EYE" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_RESILIENT_SPHERE" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_DISPEL_EVIL_AND_GOOD" level="17" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FORCE" level="17" spellcasting="Ranger" prepared="true" />
+        </rules>
+    </element>
+    <element name="Mage Breaker" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SPELLBREAKER_MAGE_BREAKER">
+        <description>
+<p>You ward your weapons with antimagic enchantments. When you hit your Quarry with a weapon attack, it has disadvantage on its next Constitution saving throw to maintain concentration.</p>
+            <p class="indent">Also, whenever you see or hear a creature within your reach attempt to cast a spell, you can use your reaction to make an opportunity attack against it.</p>
+        </description>
+        <sheet>
+            <description action="Reaction">When you hit your Quarry with a weapon attack, it has disadvantage on its next Constitution saving throw to maintain concentration. Whenever you see or hear a creature within your reach attempt to cast a spell, you can use your reaction to make an opportunity attack against it.</description>
+        </sheet>
+    </element>
+    <element name="Spellsight" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SPELLBREAKER_SPELLSIGHT">
+        <description>
+<p>You have learned to see the arcane ability of creatures. When you mark a creature as your Quarry, you learn its Spellcasting ability (if it has one) and the level of the highest spell or spell slot it is able to cast.</p>
+            <p class="indent">If your Quarry is hidden from Divination magic, such as by a nondetection spell, it appears as if it cannot cast spells.</p>
+        </description>
+        <sheet>
+            <description>When you mark a creature as your Quarry, you learn its Spellcasting ability (if it has one) and the level of the highest spell or spell slot it is able to cast.</description>
+        </sheet>
+    </element>
+    <element name="Arcane Defense" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SPELLBREAKER_ARCANE_DEFENSE">
+        <description>
+<p>You steel yourself to resist hostile magic. When your Quarry forces you to make a saving throw to resist a spell or another magical effect, you gain a bonus to your roll equal to your Wisdom modifier (minimum of +1).</p>
+            <p class="indent">Moreover, if your Quarry subjects you to a spell or magical effect that allows you to make a saving throw to take only half damage, you instead take no damage on a successful save, and only half damage on a failed saving throw.</p>
+        </description>
+        <sheet>
+            <description>When your Quarry forces you to make a saving throw to resist a spell or magical effect, you gain a bonus equal to {{wisdom:modifier}} (minimum of +1). If your Quarry subjects you to a spell or effect that allows half damage on a save, you take no damage on a success and half on a failure.</description>
+        </sheet>
+    </element>
+    <element name="Spellbane" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SPELLBREAKER_SPELLBANE">
+        <description>
+<p>You are an unparalleled hunter of mages. Whenever you hit your Quarry with a weapon attack, you can spend a spell slot of 1st level or higher to deal bonus force damage equal to one Quarry Die per level of the spell slot.</p>
+            <p class="indent">Also, when you cast counterspell or dispel magic, you gain a bonus to your ability check equal to your Quarry Die.</p>
+        </description>
+        <sheet>
+            <description>When you hit your Quarry with a weapon attack, you can spend a spell slot to deal bonus force damage equal to one Quarry Die per level of the slot. When you cast counterspell or dispel magic, you gain a bonus to your ability check equal to your Quarry Die.</description>
+        </sheet>
+    </element>
+    <element name="Mantle of the Master" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SPELLBREAKER_MANTLE_OF_THE_MASTER">
+        <description>
+<p>Your Spellbreaker training has reached its pinnacle. You gain Resistance to damage from spells and magical effects so long as you are not Unconscious or Incapacitated.</p>
+        </description>
+        <sheet>
+            <description>You gain Resistance to damage from spells and magical effects so long as you are not Unconscious or Incapacitated.</description>
+        </sheet>
+        <rules>
+            <stat name="damage:resistance" value="spell" requirements="![condition:unconscious], ![condition:incapacitated]" />
+        </rules>
+    </element>
+    <element name="Reflect Spell" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SPELLBREAKER_REFLECT_SPELL">
+        <description>
+<p>Your training allows you to strike spells from the weave. You can cast the absorb elements spell at will, at 1st-level.</p>
+            <p class="indent">After you cast absorb elements, if your next melee weapon attack is against the creature whose spell you absorbed, you treat the absorb elements damage as its maximum amount.</p>
+        </description>
+        <sheet>
+            <description>You can cast absorb elements at will, at 1st-level. If your next melee weapon attack after casting it is against the creature whose spell you absorbed, you treat the absorb elements bonus damage as its maximum amount.</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_XGTE_SPELL_ABSORB_ELEMENTS" spellcasting="Ranger" prepared="true" atwill="true" />
+        </rules>
+    </element>
+    <element name="Swarm Keeper" type="Archetype" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_ARCH_SWARM_KEEPER">
+        <supports>Ranger Conclave LL</supports>
+        <description>
+<p>Swarm Keepers enter symbiotic relationships with swarms of tiny creatures. Most often surrounded by a swarm of rodents, insects, birds, or other small animals, these strange Rangers see themselves as guardians of the smallest lives. Dwelling in the deep woods or underground caves, Swarm Keepers build communities that work together for the good of the swarm.</p><div element="ID_LLR_AF_SWARMKEEPER_MAGIC" /><div element="ID_LLR_AF_SWARMKEEPER_SYMBIOTIC_SWARM" /><div element="ID_LLR_AF_SWARMKEEPER_WRITHING_HORDE" /><div element="ID_LLR_AF_SWARMKEEPER_GREATER_SWARM" /><div element="ID_LLR_AF_SWARMKEEPER_ONE_WITH_THE_SWARM" /><div element="ID_LLR_AF_SWARMKEEPER_SWARM_MASTER" />
+        </description>
+        <sheet display="false"><description>Rangers in symbiotic relationships with swarms of tiny creatures, and guardians of the smallest lives.</description></sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_LLR_AF_SWARMKEEPER_MAGIC" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SWARMKEEPER_SYMBIOTIC_SWARM" level="3" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SWARMKEEPER_WRITHING_HORDE" level="7" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SWARMKEEPER_GREATER_SWARM" level="11" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SWARMKEEPER_ONE_WITH_THE_SWARM" level="15" />
+            <grant type="Archetype Feature" id="ID_LLR_AF_SWARMKEEPER_SWARM_MASTER" level="15" />
+        </rules>
+    </element>
+    <element name="Swarm Keeper Spells" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SWARMKEEPER_MAGIC">
+        <description>
+<p>Starting at 3rd level, you learn an additional spell when you reach certain levels in this class, as shown in the table below. The spell counts as a Ranger spell for you, but it doesn't count against the number of Ranger spells you can prepare.</p><h5>CONCLAVE SPELLS</h5>
+            <table>
+                <thead><tr><td>Ranger Level</td><td>Spell</td></tr></thead>
+                <tr><td>3</td><td><em>entangle, faerie fire</em></td></tr>
+                <tr><td>5</td><td><em>spider climb, web</em></td></tr>
+                <tr><td>9</td><td><em>fly, gaseous form</em></td></tr>
+                <tr><td>13</td><td><em>arcane eye, giant insect</em></td></tr>
+                <tr><td>17</td><td><em>arcane hand, insect plague</em></td></tr>
+            </table>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_ENTANGLE" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FAERIE_FIRE" level="3" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_SPIDER_CLIMB" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_WEB" level="5" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_FLY" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_GASEOUS_FORM" level="9" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_ARCANE_EYE" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_GIANT_INSECT" level="13" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_ARCANE_HAND" level="17" spellcasting="Ranger" prepared="true" />
+            <grant type="Spell" id="ID_PHB_SPELL_INSECT_PLAGUE" level="17" spellcasting="Ranger" prepared="true" />
+        </rules>
+    </element>
+    <element name="Symbiotic Swarm" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SWARMKEEPER_SYMBIOTIC_SWARM">
+        <description>
+<p>You have become an integral part of a swarm of vermin. You know the mage hand cantrip, but when you cast mage hand, it manifests as part of your swarm which does your bidding.</p>
+            <p class="indent">Also, you can use a bonus action on each of your turns to command your swarm in one of the following ways:</p>
+            <p class="indent"><strong><em>Biting Assault.</em></strong> One creature of your choice within 30 feet must succeed on a Dexterity saving throw or take piercing or poison damage equal to your Quarry Dice.</p>
+            <p class="indent"><strong><em>Harrying Horde.</em></strong> One creature of your choice within 30 feet must succeed on a Strength saving throw or be moved up to 15 feet in a direction of your choice. Large and larger creatures have advantage on this Strength saving throw.</p>
+            <p class="indent"><strong><em>Swarm Step.</em></strong> You are moved up to 15 feet in a direction of your choice without provoking opportunity attacks.</p>
+        </description>
+        <sheet>
+            <description action="Bonus Action">You know mage hand, which manifests as part of your swarm. As a bonus action, command your swarm: Biting Assault (one creature within 30 ft. makes a Dexterity save or takes piercing/poison damage equal to your Quarry Die), Harrying Horde (one creature within 30 ft. makes a Strength save or is moved up to 15 ft.), or Swarm Step (you move up to 15 ft. without provoking opportunity attacks).</description>
+        </sheet>
+        <rules>
+            <grant type="Cantrip" id="ID_PHB_SPELL_MAGE_HAND" spellcasting="Ranger" />
+        </rules>
+    </element>
+    <element name="Writhing Horde" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SWARMKEEPER_WRITHING_HORDE">
+        <description>
+<p>Your swarm surrounds you and enhances your abilities. You gain a climbing speed equal to your walking speed, and you can also climb difficult, sheer surfaces and upside down on ceilings without an ability check.</p>
+            <p class="indent">Also, when you make an Athletics check to resist or end a Grapple or Shove, you add your Quarry Die to your roll.</p>
+        </description>
+        <sheet>
+            <description>You gain a climbing speed equal to your walking speed, and can climb difficult, sheer surfaces and upside down on ceilings without an ability check. You add your Quarry Die to Athletics checks to resist or end a Grapple or Shove.</description>
+        </sheet>
+        <rules>
+            <stat name="speed:climb" value="speed" />
+        </rules>
+    </element>
+    <element name="Greater Swarm" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SWARMKEEPER_GREATER_SWARM">
+        <description>
+<p>Your swarm has grown vastly in both numbers and power. Your Quarry has disadvantage on saving throws against your Symbiotic Swarm features. Your Symbiotic Swarm features also gain the following additional benefits:</p>
+            <p class="indent"><strong><em>Biting Assault.</em></strong> On a failed save, the creature is Poisoned until the start of your next turn in addition to the damage.</p>
+            <p class="indent"><strong><em>Harrying Horde.</em></strong> On a failed save, the creature is knocked Prone at the end of this forced movement.</p>
+            <p class="indent"><strong><em>Swarm Step.</em></strong> After you move, you also gain the benefits of Half Cover until the beginning of your next turn.</p>
+        </description>
+        <sheet>
+            <description>Your Quarry has disadvantage on saving throws against your Symbiotic Swarm features. Biting Assault also poisons on a failed save; Harrying Horde also knocks Prone; Swarm Step also grants Half Cover until your next turn.</description>
+        </sheet>
+    </element>
+    <element name="One with the Swarm" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SWARMKEEPER_ONE_WITH_THE_SWARM">
+        <description>
+<p>You can fade into your swarm to avoid danger. When you take damage from a source you can see, you can use your reaction to become one with your swarm and give yourself Resistance to that instance of damage. You and your swarm then move up to 30 feet without provoking opportunity attacks.</p>
+            <p class="indent">You can use this reaction a number of times equal to your Wisdom modifier (minimum of once), and you regain all uses when you finish a long rest. If you have no uses left, you can expend a spell slot to use this special reaction again.</p>
+        </description>
+        <sheet>
+            <description action="Reaction" usage="{{wisdom:modifier}}/Long Rest">When you take damage from a source you can see, you can use your reaction to become one with your swarm, gaining Resistance to that instance of damage, and move up to 30 feet without provoking opportunity attacks.</description>
+        </sheet>
+    </element>
+    <element name="Swarm Master" type="Archetype Feature" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_AF_SWARMKEEPER_SWARM_MASTER">
+        <description>
+<p>You have become one with your swarm, and can command it with only your mind. Once per long rest, you can cast one of your Swarm Keeper Spells without expending a spell slot or requiring its normal material components.</p>
+        </description>
+        <sheet>
+            <description usage="1/Long Rest">You can cast one of your Swarm Keeper Spells without expending a spell slot or requiring its normal material components.</description>
+        </sheet>
+    </element>
+</elements>
