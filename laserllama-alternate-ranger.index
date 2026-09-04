@@ -6,8 +6,8 @@
 		</update>
 	</info>
 	<files>
-		<file name="source.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/source.xml" />
-		<file name="class-ranger.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/class-ranger.xml" />
-		<file name="ranger-conclaves.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/ranger-conclaves.xml" />
+		<file name="source.xml" url="https://raw.githubusercontent.com/SaifElDin080/aurora-alternate-ranger/main/source.xml" />
+		<file name="class-ranger.xml" url="https://raw.githubusercontent.com/SaifElDin080/aurora-alternate-ranger/main/class-ranger.xml" />
+		<file name="ranger-conclaves.xml" url="https://raw.githubusercontent.com/SaifElDin080/aurora-alternate-ranger/main/ranger-conclaves.xml" />
 	</files>
 </index>
