@@ -5,7 +5,7 @@
         <description>Source entry for LaserLlama's Alternate Ranger v4.4.4, a from-scratch redesign of the Ranger class.</description>
         <author url="https://www.gmbinder.com/profile/laserllama">laserllama</author>
         <update version="4.4.4">
-            <file name="source.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/source.xml" />
+            <file name="source.xml" url="https://raw.githubusercontent.com/SaifElDin080/aurora-alternate-ranger/refs/heads/main/source.xml" />
         </update>
     </info>
 
