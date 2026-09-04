@@ -2,12 +2,12 @@
 <index>
 	<info>
 		<update version="4.4.4">
-			<file name="laserllama-alternate-ranger.index" url="https://raw.githubusercontent.com/SaifElDin080/Alternative-Ranger-build/refs/heads/main/laserllama-alternate-ranger.indexmain/laserllama-alternate-ranger.index" />
+			<file name="laserllama-alternate-ranger.index" url="https://raw.githubusercontent.com/SaifElDin080/aurora-alternate-ranger/refs/heads/main/laserllama-alternate-ranger.indexmain/laserllama-alternate-ranger.index" />
 		</update>
 	</info>
 	<files>
-		<file name="source.xml" url="https://raw.githubusercontent.com/SaifElDin080/Alternative-Ranger-build/refs/heads/main/source.xml" />
-		<file name="class-ranger.xml" url="https://raw.githubusercontent.com/SaifElDin080/Alternative-Ranger-build/refs/heads/main/class-ranger.xml" />
-		<file name="ranger-conclaves.xml" url="https://raw.githubusercontent.com/SaifElDin080/Alternative-Ranger-build/refs/heads/main/ranger-conclaves.xml" />
+		<file name="source.xml" url="https://raw.githubusercontent.com/SaifElDin080/aurora-alternate-ranger/refs/heads/main/source.xml" />
+		<file name="class-ranger.xml" url="https://raw.githubusercontent.com/SaifElDin080/aurora-alternate-ranger/refs/heads/main/class-ranger.xml" />
+		<file name="ranger-conclaves.xml" url="https://raw.githubusercontent.com/SaifElDin080/aurora-alternate-ranger/refs/heads/main/ranger-conclaves.xml" />
 	</files>
 </index>
