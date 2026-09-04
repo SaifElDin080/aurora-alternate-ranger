@@ -5,7 +5,7 @@
         <description>The 9 Ranger Conclaves for LaserLlama's Alternate Ranger v4.4.4: Beast Master, Deep Stalker, Drake Guard, Fey Wanderer, Hunter, Monster Slayer, Planar Warden, Spellbreaker, and Swarm Keeper.</description>
         <author url="https://www.gmbinder.com/profile/laserllama">laserllama</author>
         <update version="4.4.4">
-            <file name="ranger-conclaves.xml" url="REPLACE_WITH_YOUR_HOSTED_URL/ranger-conclaves.xml" />
+            <file name="ranger-conclaves.xml" url="https://raw.githubusercontent.com/SaifElDin080/aurora-alternate-ranger/refs/heads/main/ranger-conclaves.xml" />
         </update>
     </info>
     <element name="Beast Master" type="Archetype" source="laserllama's Alternate Ranger v4.4.4" id="ID_LLR_ARCH_BEAST_MASTER">
